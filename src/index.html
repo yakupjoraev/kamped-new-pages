@@ -21,7 +21,51 @@
   <!-- @@include('./html/_header.html') -->
 
   <!-- Main Page -->
-  <main></main>
+  <main>
+    <div class="container">
+      <div class="pages">
+        <ul class="pages__list">
+          <li class="pages__item">
+            <a class="pages__link" href="main-page.html" target="_blank">
+              Главная
+            </a>
+          </li>
+
+          <li class="pages__item">
+            <a class="pages__link" href="main-about.html" target="_blank">
+              main-about
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <style>
+      .pages__list {
+        display: grid;
+        gap: 20px;
+        padding: 50px 0;
+      }
+
+      .pages__item {
+        display: grid;
+      }
+
+      .pages__link {
+        padding: 20px;
+        background-color: var(--red-color);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        color: var(--blue-color);
+      }
+
+      .pages__link:hover {
+        color: var(--white-color);
+      }
+    </style>
+  </main>
 
   <!-- Footer -->
   <!-- @@include('./html/_footer.html') -->
