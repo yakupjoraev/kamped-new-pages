@@ -1072,6 +1072,20 @@
         stroke: var(--red-color);
       }
     }
+
+    &.swiper-button-disabled {
+      user-select: none;
+      pointer-events: none;
+      cursor: default;
+
+      svg path {
+        stroke: #939393;
+      }
+
+      svg circle {
+        stroke: #939393;
+      }
+    }
   }
 
   // .main-about__thanks-next
@@ -1093,6 +1107,20 @@
 
       svg circle {
         stroke: var(--red-color);
+      }
+    }
+
+    &.swiper-button-disabled {
+      user-select: none;
+      pointer-events: none;
+      cursor: default;
+
+      svg path {
+        stroke: #939393;
+      }
+
+      svg circle {
+        stroke: #939393;
       }
     }
   }
@@ -1688,6 +1716,20 @@
         stroke: var(--red-color);
       }
     }
+
+    &.swiper-button-disabled {
+      user-select: none;
+      pointer-events: none;
+      cursor: default;
+
+      svg path {
+        stroke: #939393;
+      }
+
+      svg circle {
+        stroke: #939393;
+      }
+    }
   }
 
   // .main-about__revievs-next
@@ -1708,6 +1750,20 @@
 
       svg circle {
         stroke: var(--red-color);
+      }
+    }
+
+    &.swiper-button-disabled {
+      user-select: none;
+      pointer-events: none;
+      cursor: default;
+
+      svg path {
+        stroke: #939393;
+      }
+
+      svg circle {
+        stroke: #939393;
       }
     }
 
