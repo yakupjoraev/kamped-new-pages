@@ -92,6 +92,10 @@
   </div>
 
 
+
+
+
+
   <div class="main-page__benefits main-page__block">
     <div class="container">
       <div class="main-page__benefits-inner">
@@ -246,6 +250,623 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="pick-up-points main-page__block">
+    <div class="container">
+      <form action="#" class="pick-up-points__inner">
+        <div class="pick-up-points__header">
+          <h3 class="pick-up-points__title main-page__articles-title">
+            Пункты выдачи полиса ОМС в регионе
+            <span>
+              Санкт-Петербург
+            </span>
+          </h3>
+
+          <button type="button" class="pick-up-points__cities-btn">
+            Выбрать другой регион
+          </button>
+        </div>
+
+        <div class="pick-up-points__filters">
+          <div class="pick-up-points__filter">
+            <label class="pick-up-points__filter-label" for="pick-up-points-cities">
+              Населенный пункт
+            </label>
+
+            <input class="pick-up-points__filter-input" type="text" placeholder="Все в регионе"
+              id="pick-up-points-cities">
+
+
+            <img src="./img/main-page/chevron-down.svg" alt="">
+          </div>
+
+          <div class="pick-up-points__filter">
+            <label class="pick-up-points__filter-label" for="pick-up-points-search">
+              Введите название улицы или станции метро
+            </label>
+
+            <input class="pick-up-points__filter-input" type="text" placeholder="" id="pick-up-points-search">
+
+            <img src="./img/main-page/search.svg" alt="">
+          </div>
+        </div>
+
+        <div class="pick-up-points__views">
+          <button type="button" class="pick-up-points__view" data-pick-up-points-btn-map>
+            <img src="./img/main-page/maps.svg" alt="">
+
+            Только карта
+          </button>
+
+          <button type="button" class="pick-up-points__view" data-pick-up-points-btn-list>
+            <img src="./img/main-page/list.svg" alt="">
+
+            Только список
+          </button>
+
+          <button type="button" class="pick-up-points__view active" data-pick-up-points-btn-map-list>
+            <img src="./img/main-page/map-list.svg" alt="">
+
+            Карта и список
+          </button>
+
+
+          <a class="pick-up-points__downloud" href="./img/main-page/pick-up-points-downloud.svg" download>
+            <img src="./img/main-page/pick-up-points-downloud.svg" alt="">
+
+            Скачать список в .pdf
+          </a>
+        </div>
+
+        <div class="pick-up-points__content points-map-list">
+          <div class="pick-up-points__map" data-pick-up-points-map>
+            <div class="pick-up-points__map-map"></div>
+          </div>
+
+          <div class="pick-up-points__list" data-pick-up-points-list>
+            <div class="pick-up-points__list-inner">
+              <ul class="pick-up-points__list-list">
+                <li class="pick-up-points__list-item">
+                  <h4 class="pick-up-points__list-title">
+                    Центральный офис филиала
+                    в г. Калининграде
+                  </h4>
+
+                  <div class="pick-up-points__list-address">
+                    <img src="./img/main-page/location-pin-alt.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p>
+                        г. Калининград, площадь Победы, д.10
+                        (4 этаж, офис 418)
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="pick-up-points__list-time">
+                    <img src="./img/main-page/clock-eight.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p class="pick-up-points__list-open">
+                        Открыто c 09:00 до 18:00
+                      </p>
+
+                      <div class="pick-up-points__list-worked">
+                        Режим работы
+
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 4.5L6 7.5L9 4.5" stroke="#969696" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+
+                      </div>
+
+                      <ul class="pick-up-points__list-days">
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пн</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вт</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Ср</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Чт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Сб</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вс</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="pick-up-points__list-phones">
+                    <img src="./img/main-page/phone.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <a href="tel:+74012593020">+7 (4012) 59-30-20</a>
+                      <a href="tel:88001008101">8-800-100-81-01</a>
+                      <a href="tel:88001008102">8-800-100-81-02</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="pick-up-points__list-item">
+                  <h4 class="pick-up-points__list-title">
+                    Офис филиала в г. Балтийске
+                  </h4>
+
+                  <div class="pick-up-points__list-address">
+                    <img src="./img/main-page/location-pin-alt.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p>
+                        г. Балтийск, улица Чехова, д.7
+                        (здание детской поликлиники )
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="pick-up-points__list-time">
+                    <img src="./img/main-page/clock-eight.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p class="pick-up-points__list-open">
+                        Открыто c 09:00 до 18:00
+                      </p>
+
+                      <div class="pick-up-points__list-worked">
+                        Режим работы
+
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 4.5L6 7.5L9 4.5" stroke="#969696" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+
+                      </div>
+
+                      <ul class="pick-up-points__list-days">
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пн</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вт</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Ср</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Чт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Сб</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вс</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="pick-up-points__list-phones">
+                    <img src="./img/main-page/phone.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <a href="tel:+74012593020">+7 (4012) 59-30-20</a>
+                      <a href="tel:88001008101">8-800-100-81-01</a>
+                      <a href="tel:88001008102">8-800-100-81-02</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="pick-up-points__list-item">
+                  <h4 class="pick-up-points__list-title">
+                    Центральный офис филиала
+                    в г. Калининграде
+                  </h4>
+
+                  <div class="pick-up-points__list-address">
+                    <img src="./img/main-page/location-pin-alt.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p>
+                        г. Калининград, площадь Победы, д.10
+                        (4 этаж, офис 418)
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="pick-up-points__list-time">
+                    <img src="./img/main-page/clock-eight.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p class="pick-up-points__list-open">
+                        Открыто c 09:00 до 18:00
+                      </p>
+
+                      <div class="pick-up-points__list-worked">
+                        Режим работы
+
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 4.5L6 7.5L9 4.5" stroke="#969696" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+
+                      </div>
+
+                      <ul class="pick-up-points__list-days">
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пн</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вт</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Ср</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Чт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Сб</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вс</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="pick-up-points__list-phones">
+                    <img src="./img/main-page/phone.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <a href="tel:+74012593020">+7 (4012) 59-30-20</a>
+                      <a href="tel:88001008101">8-800-100-81-01</a>
+                      <a href="tel:88001008102">8-800-100-81-02</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="pick-up-points__list-item">
+                  <h4 class="pick-up-points__list-title">
+                    Центральный офис филиала
+                    в г. Калининграде
+                  </h4>
+
+                  <div class="pick-up-points__list-address">
+                    <img src="./img/main-page/location-pin-alt.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p>
+                        г. Калининград, площадь Победы, д.10
+                        (4 этаж, офис 418)
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="pick-up-points__list-time">
+                    <img src="./img/main-page/clock-eight.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p class="pick-up-points__list-open">
+                        Открыто c 09:00 до 18:00
+                      </p>
+
+                      <div class="pick-up-points__list-worked">
+                        Режим работы
+
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 4.5L6 7.5L9 4.5" stroke="#969696" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+
+                      </div>
+
+                      <ul class="pick-up-points__list-days">
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пн</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вт</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Ср</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Чт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Сб</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вс</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="pick-up-points__list-phones">
+                    <img src="./img/main-page/phone.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <a href="tel:+74012593020">+7 (4012) 59-30-20</a>
+                      <a href="tel:88001008101">8-800-100-81-01</a>
+                      <a href="tel:88001008102">8-800-100-81-02</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="pick-up-points__list-item">
+                  <h4 class="pick-up-points__list-title">
+                    Центральный офис филиала
+                    в г. Калининграде
+                  </h4>
+
+                  <div class="pick-up-points__list-address">
+                    <img src="./img/main-page/location-pin-alt.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p>
+                        г. Калининград, площадь Победы, д.10
+                        (4 этаж, офис 418)
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="pick-up-points__list-time">
+                    <img src="./img/main-page/clock-eight.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p class="pick-up-points__list-open">
+                        Открыто c 09:00 до 18:00
+                      </p>
+
+                      <div class="pick-up-points__list-worked">
+                        Режим работы
+
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 4.5L6 7.5L9 4.5" stroke="#969696" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+
+                      </div>
+
+                      <ul class="pick-up-points__list-days">
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пн</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вт</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Ср</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Чт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Сб</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вс</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="pick-up-points__list-phones">
+                    <img src="./img/main-page/phone.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <a href="tel:+74012593020">+7 (4012) 59-30-20</a>
+                      <a href="tel:88001008101">8-800-100-81-01</a>
+                      <a href="tel:88001008102">8-800-100-81-02</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="pick-up-points__list-item">
+                  <h4 class="pick-up-points__list-title">
+                    Центральный офис филиала
+                    в г. Калининграде
+                  </h4>
+
+                  <div class="pick-up-points__list-address">
+                    <img src="./img/main-page/location-pin-alt.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p>
+                        г. Калининград, площадь Победы, д.10
+                        (4 этаж, офис 418)
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <div class="pick-up-points__list-time">
+                    <img src="./img/main-page/clock-eight.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <p class="pick-up-points__list-open">
+                        Открыто c 09:00 до 18:00
+                      </p>
+
+                      <div class="pick-up-points__list-worked">
+                        Режим работы
+
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 4.5L6 7.5L9 4.5" stroke="#969696" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+
+                      </div>
+
+                      <ul class="pick-up-points__list-days">
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пн</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вт</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Ср</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Чт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Пт</p>
+                          <p class="pick-up-points__list-day-times">08:00-17:00 <span>(обед 12:00-13:00)</span></p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Сб</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+
+                        <li class="pick-up-points__list-day">
+                          <p class="pick-up-points__list-day-day">Вс</p>
+                          <p class="pick-up-points__list-day-times">Выходной</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="pick-up-points__list-phones">
+                    <img src="./img/main-page/phone.svg" alt="">
+
+                    <div class="pick-up-points__list-info">
+                      <a href="tel:+74012593020">+7 (4012) 59-30-20</a>
+                      <a href="tel:88001008101">8-800-100-81-01</a>
+                      <a href="tel:88001008102">8-800-100-81-02</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+      <div class="pick-up-points__footer">
+        <img src="./img/main-page/circle-information.svg" alt="">
+
+        <p class="pick-up-points__footer-descr">
+          Информация на карте о режиме работы пунктов выдачи полиса ОМС обновляется каждые 6 часов. Также вы можете
+          уточнить график работы позвонив по телефону Контакт-центра
+          <a href="tel:+">
+            8-800-100-81-02
+          </a>
+          . Круглосуточно. Звонок по России бесплатный.
+        </p>
       </div>
     </div>
   </div>
