@@ -99,3 +99,69 @@ var swiper6 = new Swiper(".main-page__history-slider", {
     }
   }
 });
+
+function pickUpPointsView() {
+  const container = document.querySelector('.pick-up-points')
+
+  if (!container) {
+    return null
+  }
+
+  // Получаем все кнопки
+  const buttons = document.querySelectorAll(".pick-up-points__view");
+
+  // Функция для удаления класса "active" у всех кнопок
+  function removeActiveClass() {
+    buttons.forEach((button) => button.classList.remove("active"));
+  }
+
+  // Добавляем обработчики событий на каждую кнопку
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Если у кнопки уже есть класс "active", выходим из функции
+      if (this.classList.contains("active")) return;
+
+      // Удаляем класс "active" у всех кнопок
+      removeActiveClass();
+
+      // Добавляем класс "active" для кликнутой кнопки
+      this.classList.add("active");
+
+      // Получаем значение атрибута "data-pick-up-points-btn" кликнутой кнопки
+      const targetContent = this.getAttribute("data-pick-up-points-btn");
+
+      // Получаем элемент контентного div'а
+      const content = document.querySelector("[data-pick-up-points-content]");
+
+      // Удаляем все классы, начинающиеся с "points-" у контентного div'а
+      content.classList.forEach((className) => {
+        if (className.startsWith("points-")) {
+          content.classList.remove(className);
+        }
+      });
+
+      // Добавляем класс points-* в соответствии с выбранной кнопкой
+      content.classList.add(targetContent);
+    });
+  });
+}
+
+pickUpPointsView();
+
+function pointsListWorked() {
+  const container = document.querySelector('.pick-up-points')
+
+  if (!container) {
+    return null
+  }
+
+  let workeds = document.querySelectorAll('[data-pick-up-points-list-worked]')
+
+  workeds.forEach(worked => {
+    worked.addEventListener('click', () => {
+      worked.classList.toggle('show')
+    })
+  });
+}
+
+pointsListWorked();

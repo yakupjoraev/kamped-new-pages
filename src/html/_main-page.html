@@ -301,19 +301,19 @@
         </div>
 
         <div class="pick-up-points__views">
-          <button type="button" class="pick-up-points__view" data-pick-up-points-btn-map>
+          <button type="button" class="pick-up-points__view" data-pick-up-points-btn="points-map">
             <img src="./img/main-page/maps.svg" alt="">
 
             Только карта
           </button>
 
-          <button type="button" class="pick-up-points__view" data-pick-up-points-btn-list>
+          <button type="button" class="pick-up-points__view" data-pick-up-points-btn="points-list">
             <img src="./img/main-page/list.svg" alt="">
 
             Только список
           </button>
 
-          <button type="button" class="pick-up-points__view active" data-pick-up-points-btn-map-list>
+          <button type="button" class="pick-up-points__view active" data-pick-up-points-btn="points-map-list">
             <img src="./img/main-page/map-list.svg" alt="">
 
             Карта и список
@@ -327,7 +327,7 @@
           </a>
         </div>
 
-        <div class="pick-up-points__content points-map-list">
+        <div class="pick-up-points__content points-map-list" data-pick-up-points-content>
           <div class="pick-up-points__map" data-pick-up-points-map>
             <div class="pick-up-points__map-map"></div>
           </div>
@@ -361,7 +361,7 @@
                         Открыто c 09:00 до 18:00
                       </p>
 
-                      <div class="pick-up-points__list-worked">
+                      <div class="pick-up-points__list-worked" data-pick-up-points-list-worked>
                         Режим работы
 
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -446,7 +446,7 @@
                         Открыто c 09:00 до 18:00
                       </p>
 
-                      <div class="pick-up-points__list-worked">
+                      <div class="pick-up-points__list-worked" data-pick-up-points-list-worked>
                         Режим работы
 
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -532,7 +532,7 @@
                         Открыто c 09:00 до 18:00
                       </p>
 
-                      <div class="pick-up-points__list-worked">
+                      <div class="pick-up-points__list-worked" data-pick-up-points-list-worked>
                         Режим работы
 
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -618,7 +618,7 @@
                         Открыто c 09:00 до 18:00
                       </p>
 
-                      <div class="pick-up-points__list-worked">
+                      <div class="pick-up-points__list-worked" data-pick-up-points-list-worked>
                         Режим работы
 
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -704,7 +704,7 @@
                         Открыто c 09:00 до 18:00
                       </p>
 
-                      <div class="pick-up-points__list-worked">
+                      <div class="pick-up-points__list-worked" data-pick-up-points-list-worked>
                         Режим работы
 
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -790,7 +790,7 @@
                         Открыто c 09:00 до 18:00
                       </p>
 
-                      <div class="pick-up-points__list-worked">
+                      <div class="pick-up-points__list-worked" data-pick-up-points-list-worked>
                         Режим работы
 
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -851,8 +851,14 @@
                 </li>
               </ul>
             </div>
+
+            <a class="main-page__articles-all" href="#">
+              Показать еще
+            </a>
           </div>
         </div>
+
+
       </form>
 
 

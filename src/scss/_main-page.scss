@@ -1802,13 +1802,83 @@
     height: 664px;
     border-radius: 25px;
     overflow: hidden;
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      height: 100%;
+    }
+
+
+    &.points-map-list {
+      .pick-up-points__map {
+        flex: 0 1 736px;
+        height: 100%;
+
+        @media (max-width: $breakpoint768) {
+          flex: 0 1 auto;
+          width: 100%;
+          height: 450px;
+        }
+      }
+
+      .pick-up-points__list {
+        flex: 0 0 384px;
+
+        @media (max-width: $breakpoint768) {
+          flex: 0 1 auto;
+          width: 100%;
+        }
+      }
+    }
+
+    &.points-map {
+      .pick-up-points__map {
+        flex: 0 1 100%;
+        height: 100%;
+
+        @media (max-width: $breakpoint768) {
+          flex: 0 1 auto;
+          width: 100%;
+          height: 450px;
+        }
+      }
+
+      .pick-up-points__list {
+        flex: 0 0 0;
+        width: 0;
+
+        @media (max-width: $breakpoint768) {
+          height: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    &.points-list {
+      .pick-up-points__map {
+        flex: 0 0 0;
+        width: 0;
+        height: 0;
+
+        @media (max-width: $breakpoint768) {}
+      }
+
+      .pick-up-points__list {
+        flex: 0 1 100%;
+        width: 100%;
+
+        @media (max-width: $breakpoint768) {
+          height: 0;
+          padding: 0;
+        }
+      }
+    }
   }
 
   // .pick-up-points__map
 
   &__map {
-    flex: 0 1 736px;
-    height: 100%;
+    transition: width 0.5s linear, flex 0.5s linear;
   }
 
   // .pick-up-points__map-map
@@ -1822,19 +1892,31 @@
   // .pick-up-points__list
 
   &__list {
-    box-sizing: border-box;
-    flex: 0 0 384px;
     padding-right: 10px;
     padding: 32px 0;
     border-radius: 0px 25px 25px 0px;
     background-color: rgb(215, 230, 247, 0.2);
+
+    transition: width 0.5s linear, flex 0.5s linear;
+
+    .main-page__articles-all {
+      display: none;
+    }
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+      border-radius: 0 0 25px 25px;
+
+      .main-page__articles-all {
+        display: flex;
+        margin-bottom: 32px;
+      }
+    }
   }
 
   // .pick-up-points__list-inner
 
   &__list-inner {
-
-    box-sizing: border-box;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
@@ -1858,6 +1940,15 @@
   &__list-list {
     height: 600px;
     padding: 0 20px 0 32px;
+
+    @media (max-width: $breakpoint992) {
+      padding: 0 16px 0 20px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      height: 100%;
+      padding: 0 16px;
+    }
   }
 
   // .pick-up-points__list-item
@@ -1883,6 +1974,10 @@
     line-height: 120%;
     font-size: 20px;
     color: var(--blue-color);
+
+    @media (max-width: $breakpoint768) {
+      font-size: 18px;
+    }
   }
 
   // .pick-up-points__list-address
@@ -1936,14 +2031,41 @@
     font-size: 14px;
     color: #969696;
 
+    cursor: pointer;
+
     svg {
       cursor: pointer;
+
+      transition: 0.2s linear;
+    }
+
+    &.show {
+      svg {
+        transform: rotate(180deg);
+      }
+
+
+      &~.pick-up-points__list-days {
+        max-height: 500px;
+        opacity: 1;
+        user-select: auto;
+        pointer-events: visible;
+      }
     }
   }
 
   // .pick-up-points__list-days
 
-  &__list-days {}
+  &__list-days {
+    max-height: 0;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+
+    transition: 0.3s linear;
+
+
+  }
 
   // .pick-up-points__list-day
 
@@ -1999,9 +2121,33 @@
 
   // .pick-up-points__footer
 
-  &__footer {}
+  &__footer {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 16px;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgb(215, 230, 247, 0.2);
+
+
+    @media (max-width: $breakpoint480) {
+      padding: 15px;
+    }
+  }
 
   // .pick-up-points__footer-descr
 
-  &__footer-descr {}
+  &__footer-descr {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--blue-color);
+
+    a {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 140%;
+      color: var(--red-color);
+    }
+  }
 }
