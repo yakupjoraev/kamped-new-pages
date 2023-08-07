@@ -1,4 +1,87 @@
 // Custom Scripts
+// Мобильное меню бургер
+function burgerMenu() {
+  const burger = document.querySelector('.new-header__adaptive-burger')
+  const menu = document.querySelector('.new-header__menu')
+  const body = document.querySelector('body')
+  burger.addEventListener('click', () => {
+    if (!menu.classList.contains('active')) {
+      menu.classList.add('active')
+      burger.classList.add('active-burger')
+      body.classList.add('locked')
+    } else {
+      menu.classList.remove('active')
+      burger.classList.remove('active-burger')
+      body.classList.remove('locked')
+    }
+  })
+  //снять классы при клике на элементы меню
+  const menuItems = document.querySelectorAll('[data-nav-item]')
+
+  menuItems.forEach(item => {
+    item.addEventListener('click', function () {
+      menu.classList.remove('active')
+      burger.classList.remove('active-burger')
+      body.classList.remove('locked')
+    })
+  });
+
+  // Вот тут мы ставим брейкпоинт навбара
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 991.98) {
+      menu.classList.remove('active')
+      burger.classList.remove('active-burger')
+      body.classList.remove('locked')
+    }
+  })
+}
+burgerMenu()
+
+
+// Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
+function fixedNav() {
+  const nav = document.querySelector('nav')
+
+  // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
+  const breakpoint = 1
+  if (window.scrollY >= breakpoint) {
+    nav.classList.add('fixed__nav')
+  } else {
+    nav.classList.remove('fixed__nav')
+  }
+}
+window.addEventListener('scroll', fixedNav)
+
+
+
+function newsTab() {
+  const container = document.querySelector('.main-page__news')
+
+  if (!container) {
+    return null;
+  }
+
+  let tabs = document.querySelectorAll('[data-main-page-news-tab]');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Сначала снимаем класс 'active' с остальных вкладок
+      tabs.forEach(otherTab => {
+        if (otherTab !== tab) {
+          otherTab.classList.remove('active');
+        }
+      });
+
+      // Добавляем класс 'active' к текущей вкладке
+      tab.classList.add('active');
+    });
+  });
+}
+
+newsTab();
+
+
+
 // Custom scripts
 var swiper1 = new Swiper(".main-about__thanks-slider", {
   slidesPerView: "auto",

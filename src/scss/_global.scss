@@ -22,13 +22,17 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 // Body Locked
 body {
   font-family: "HelveticaNeueCyr", sans-serif;
 
-  &.locked {
-    overflow: hidden;
-  }
+  // &.locked {
+  //   overflow: hidden;
+  // }
 }
 
 

@@ -191,6 +191,10 @@
     font-weight: 400;
     line-height: 120%;
     color: var(--blue-color);
+
+    @media (max-width: 359px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -935,6 +939,8 @@
     line-height: 40px;
     font-size: 32px;
     color: var(--blue-color);
+
+    cursor: pointer;
 
     span {
       font-weight: 700;
