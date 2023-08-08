@@ -16,7 +16,7 @@ function burgerMenu() {
     }
   })
   //снять классы при клике на элементы меню
-  const menuItems = document.querySelectorAll('[data-nav-item]')
+  const menuItems = document.querySelectorAll('[data-nav-item-link]')
 
   menuItems.forEach(item => {
     item.addEventListener('click', function () {
@@ -52,6 +52,49 @@ function fixedNav() {
 }
 window.addEventListener('scroll', fixedNav)
 
+function showSublist() {
+  let arrows = document.querySelectorAll('[data-new-header-arrow]');
+
+  if (window.matchMedia("(max-width: 1200px)").matches) {
+    arrows.forEach(arrow => {
+      arrow.addEventListener('click', () => {
+        let parentElement = arrow.parentNode;
+        parentElement.classList.toggle('show');
+      });
+    });
+  }
+
+  let navItems = document.querySelectorAll('[data-nav-item]');
+
+  if (window.matchMedia("(min-width: 1201px)").matches) {
+    navItems.forEach(navItem => {
+      let subMenu = navItem.querySelector('.new-header__menu-sub');
+      let timeout;
+
+      document.querySelector('[data-nav-item-close]').addEventListener('click', () => {
+        navItem.classList.remove('show')
+      })
+
+      navItem.addEventListener('mouseenter', () => {
+        clearTimeout(timeout); // Очищаем предыдущий таймер, если есть
+        navItem.classList.add('show');
+      });
+
+      navItem.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          navItem.classList.remove('show');
+        }, 200); // Задержка в 200 миллисекунд (0.2 секунды)
+      });
+    });
+
+
+  }
+
+}
+
+showSublist();
+
+
 
 
 function newsTab() {
@@ -62,20 +105,28 @@ function newsTab() {
   }
 
   let tabs = document.querySelectorAll('[data-main-page-news-tab]');
+  let tabContents = document.querySelectorAll('[data-main-page-news-tab-content]');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      // Сначала снимаем класс 'active' с остальных вкладок
+      const tabId = tab.getAttribute('data-main-page-news-tab');
+      const content = document.querySelector(`[data-main-page-news-tab-content="${tabId}"]`);
+
       tabs.forEach(otherTab => {
         if (otherTab !== tab) {
           otherTab.classList.remove('active');
         }
       });
 
-      // Добавляем класс 'active' к текущей вкладке
+      tabContents.forEach(otherContent => {
+        otherContent.style.display = 'none';
+      });
+
       tab.classList.add('active');
+      content.style.display = 'grid';
     });
   });
+
 }
 
 newsTab();
@@ -123,7 +174,9 @@ function newAccardion() {
   accordionItems.forEach(item => item.addEventListener('click', toggleAccordion));
 }
 
-newAccardion()
+newAccardion();
+
+
 
 // Custom scripts
 var swiper1 = new Swiper(".main-about__thanks-slider", {

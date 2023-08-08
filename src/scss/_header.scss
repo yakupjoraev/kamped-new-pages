@@ -387,6 +387,11 @@
   // .new-header__menu-item
 
   &__menu-item {
+    padding: 28px 0;
+
+    @media (max-width:1200px) {
+      padding: 0;
+    }
 
     &>img {
       display: none;
@@ -397,12 +402,11 @@
       width: 100%;
       border-bottom: 1px solid rgb(150, 150, 150, 0.2);
 
-      x &>img {
+      &>img {
         display: block;
         position: absolute;
         right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 20px;
         cursor: pointer;
       }
     }
@@ -435,9 +439,11 @@
     align-items: center;
     column-gap: 10px;
     padding: 28px 18px;
+    margin: -28px 0;
     background-color: #E6F3FF;
 
     @media (max-width:1200px) {
+      margin: 0;
       padding: 20px 0;
       background-color: transparent;
 
@@ -492,27 +498,48 @@
   }
 }
 
+.new-header__menu-item.show {
+  .new-header__menu-sub {
+    max-height: 1000px;
+    min-height: calc(100vh - 223px);
+    user-select: auto;
+    pointer-events: visible;
+    padding: 40px 0;
+
+    @media (max-width: 1200px) {
+      padding: 20px;
+      min-height: 0;
+    }
+  }
+}
 
 .new-header {
 
   // .new-header__menu-sub
 
   &__menu-sub {
+    max-height: 0;
+    user-select: none;
+    pointer-events: none;
+    overflow: hidden;
+
     position: absolute;
     top: 101%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    min-height: calc(100vh - 223px);
-    padding: 40px 0;
+    // min-height: calc(100vh - 223px);
+    padding: 0;
     background-color: var(--white-color);
     z-index: 7;
+
+    transition: max-height 0.4s linear, padding 0.4s linear;
 
     @media (max-width: 1200px) {
       position: static;
       min-height: auto;
       transform: translateX(0);
-      padding: 20px;
+
     }
   }
 
@@ -630,11 +657,6 @@
   flex-direction: column;
 }
 
-.new-questions-accordion__item {
-  overflow: hidden;
-}
-
-
 .new-questions-accordion__item.active .new-questions-accordion__header {}
 
 .new-questions-accordion__header {
@@ -647,7 +669,6 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease, padding 0.2s ease;
-
 }
 
 .new-questions-accordion__item.active .new-questions-accordion__header {}
@@ -661,30 +682,98 @@
 
   // .new-header__questions
 
-  &__questions {}
+  &__questions {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto 40px;
+    padding: 40px 15px;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
 
   // .new-header__questions-header
 
-  &__questions-header {}
+  &__questions-header {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 30px;
+  }
 
   // .new-header__questions-title
 
-  &__questions-title {}
+  &__questions-title {
+    font-weight: 550;
+    line-height: 135%;
+    font-size: 26px;
+    color: var(--blue-color);
+  }
 
   // .new-header__questions-accordion
 
-  &__questions-accordion {}
+  &__questions-accordion {
+    max-height: 600px;
+    padding-right: 20px;
+    overflow-y: auto;
+
+    scrollbar-color: var(--red-color) #D7E6F7;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      border-radius: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #D7E6F7;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 16px;
+      background: var(--red-color);
+    }
+  }
 }
 
 .new-questions-accordion {
 
   // .new-questions-accordion__item
 
-  &__item {}
+  &__item {
+    border-bottom: 1px solid rgb(150, 150, 150, 0.2);
+
+    &.active {
+      .new-questions-accordion__header img {
+        transform: rotate(180deg);
+      }
+
+      .new-questions-accordion__content {
+        padding-bottom: 20px;
+      }
+    }
+  }
 
   // .new-questions-accordion__header
 
-  &__header {}
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 20px 0;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    color: var(--blue-color);
+
+    img {
+      margin-right: 16px;
+      transition: transform 0.2s linear;
+    }
+  }
 
   // .new-questions-accordion__content
 
@@ -692,5 +781,10 @@
 
   // .new-questions-accordion__text
 
-  &__text {}
+  &__text {
+    font-weight: 400;
+    line-height: 135%;
+    font-size: 17px;
+    color: var(--black-color);
+  }
 }

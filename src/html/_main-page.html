@@ -1067,7 +1067,7 @@
     <div class="container">
       <div class="main-page__news__inner">
         <div class="main-page__news-tabs">
-          <h3 class="main-page__news-tab active" data-main-page-news-tab>
+          <h3 class="main-page__news-tab active" data-main-page-news-tab="1">
             <span>
               Новости СМИ
             </span>
@@ -1075,11 +1075,11 @@
             о системе ОМС
           </h3>
 
-          <h3 class="main-page__news-tab" data-main-page-news-tab>Новости компании</h3>
+          <h3 class="main-page__news-tab" data-main-page-news-tab="2">Новости компании</h3>
 
         </div>
 
-        <div class="main-page__news-lists">
+        <div class="main-page__news-lists" data-main-page-news-tab-content="1">
           <ul class="main-page__news-list">
             <li class="main-page__news-item">
               <a class="main-page__news-link" href="#">
@@ -1231,6 +1231,73 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="main-page__news-company" data-main-page-news-tab-content="2">
+          <a class="main-page__news-company-item" href="#">
+            <p class="main-page__news-company-label">
+              Удмуртская Республика
+            </p>
+
+            <h4 class="main-page__news-company-title">
+              Филиал ООО «Капитал МС»
+              по Удмуртской Республике
+              провел «Школу здоровья»
+              для мам
+            </h4>
+
+            <div class="main-page__news-company-footer">
+              <div class="main-page__news-company-data">
+                20 мая 2023
+              </div>
+
+              <img src="./img/main-page/arrow-right.svg" alt="arrow-right">
+            </div>
+          </a>
+
+          <a class="main-page__news-company-item" href="#">
+            <p class="main-page__news-company-label">
+              Удмуртская Республика
+            </p>
+
+            <h4 class="main-page__news-company-title">
+              Страховые представители
+              Московского филиала ООО
+              «Капитал-МС» продолжают
+              поздравлять ветеранов
+              Великой Отечественной
+            </h4>
+
+            <div class="main-page__news-company-footer">
+              <div class="main-page__news-company-data">
+                20 мая 2023
+              </div>
+
+              <img src="./img/main-page/arrow-right.svg" alt="arrow-right">
+            </div>
+          </a>
+
+          <a class="main-page__news-company-item" href="#">
+            <p class="main-page__news-company-label">
+              Удмуртская Республика
+            </p>
+
+            <h4 class="main-page__news-company-title">
+              С наступлением теплых дней
+              начинается сезон активности
+              клещей. Заблаговременно
+              позаботьтесь о профилактике
+              и узнайте, что делать и куда
+            </h4>
+
+            <div class="main-page__news-company-footer">
+              <div class="main-page__news-company-data">
+                20 мая 2023
+              </div>
+
+              <img src="./img/main-page/arrow-right.svg" alt="arrow-right">
+            </div>
+          </a>
         </div>
 
         <a class="main-page__articles-all" href="#">
@@ -1511,4 +1578,63 @@
       </div>
     </div>
   </div>
+
+
+  <div class="main-page__contacts main-page__block">
+    <div class="container">
+      <div class="main-page__contacts-inner">
+        <h3 class="main-page__contacts-title">
+          <span>
+            Страховые представители
+          </span>
+          всегда рядом с вами!
+        </h3>
+
+        <div class="main-page__contacts-groups">
+          <div class="main-page__contacts-phones">
+            <div class="main-page__contacts-phone">
+              <h4 class="main-page__contacts-phone-label">
+                Федеральный контакт-центр
+              </h4>
+
+              <a class="main-page__contacts-tel" href="tel:88001008102">8-800-100-81-02</a>
+              <p class="main-page__contacts-phone-descr">Круглосуточно. Звонок бесплатный</p>
+            </div>
+
+            <div class="main-page__contacts-phone">
+              <h4 class="main-page__contacts-phone-label">
+                Санкт-Петербург
+              </h4>
+
+              <a class="main-page__contacts-tel" href="tel:+78123256774">+7 (812) 325-67-74</a>
+              <p class="main-page__contacts-phone-descr">Круглосуточно. Звонок бесплатный</p>
+            </div>
+          </div>
+
+          <form class="main-page__contacts-form" action="#">
+            <div class="main-page__contacts-form-group">
+              <label class="main-page__contacts-form-label" for="main-page__contacts-form-1">
+                Ваше ФИО *
+              </label>
+
+              <input class="main-page__contacts-form-input" type="text" placeholder="Фамилия Имя Отчество"
+                id="main-page__contacts-form-1">
+            </div>
+
+            <div class="main-page__contacts-form-group">
+              <label class="main-page__contacts-form-label" for="main-page__contacts-form-2">
+                Ваш контактный телефон *
+              </label>
+
+              <input class="main-page__contacts-form-input" type="tel" placeholder="+7 (___) ___ __ __"
+                id="main-page__contacts-form-2">
+            </div>
+
+            <button type="button" class="main-page__contacts-form-btn">Заказать обратный звонок</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>
