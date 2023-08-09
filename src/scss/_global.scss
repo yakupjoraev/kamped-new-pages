@@ -22,6 +22,16 @@
   }
 }
 
+.container {
+  @media (max-width: $breakpoint992) {
+    padding: 0 34px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding: 0 20px;
+  }
+}
+
 html {
   overflow-x: hidden;
 }

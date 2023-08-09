@@ -977,7 +977,7 @@ body {
 
 .main-about__reliability {
   margin-bottom: 60px;
-  padding: 64px;
+  padding: 64px 40px 64px 64px;
   border-radius: 16px;
   background-color: #F8F8F8;
 }
@@ -1236,7 +1236,7 @@ body {
 
 .main-about__thanks {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .main-about__thanks-header {
@@ -1554,6 +1554,9 @@ body {
   padding: 64px;
   border-radius: 25px;
   background-color: #E6F3FF;
+  background-image: url("../img/main-page/main-page-contacts-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 70px;
 }
 
@@ -3948,6 +3951,10 @@ body {
 }
 
 @media (max-width: 991.98px) {
+  .container {
+    padding: 0 34px;
+  }
+
   .new-header__top-label {
     font-size: 12px;
     line-height: 20px;
@@ -3998,7 +4005,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    row-gap: 30px;
+    row-gap: 24px;
     margin-bottom: 40px;
   }
 
@@ -4022,6 +4029,10 @@ body {
     width: 122px;
     height: 122px;
     margin-bottom: 0;
+  }
+
+  .main-about__director-words {
+    padding: 30px 34px;
   }
 
   .main-about__director-words::before {
@@ -4050,6 +4061,10 @@ body {
 
   .main-about__subtitle {
     margin-bottom: 15px;
+  }
+
+  .main-about__text {
+    max-width: 474px;
   }
 
   .main-about__map-container {
@@ -4115,7 +4130,7 @@ body {
   }
 
   .main-about__thanks-slider {
-    max-width: calc(100vw - 50px);
+    max-width: calc(100vw - 80px);
   }
 
   .main-about__charter {
@@ -4185,7 +4200,7 @@ body {
   }
 
   .main-about__revievs-slider {
-    max-width: calc(100vw - 50px);
+    max-width: calc(100vw - 80px);
   }
 
   .main-page__years-block {
@@ -4328,6 +4343,10 @@ body {
 }
 
 @media (max-width: 767.98px) {
+  .container {
+    padding: 0 20px;
+  }
+
   .new-header {
     margin-bottom: 28px;
   }
@@ -4431,6 +4450,10 @@ body {
     text-align: center;
   }
 
+  .main-about__subtitle span {
+    font-size: 28px;
+  }
+
   .main-about__text {
     font-size: 18px;
     text-align: center;
@@ -4469,6 +4492,10 @@ body {
     text-align: center;
   }
 
+  .main-about__reliability-item:nth-child(2) {
+    display: none;
+  }
+
   .main-about__reliability-pic {
     margin-bottom: 15px;
   }
@@ -4502,6 +4529,10 @@ body {
   .main-about__competence {
     margin-bottom: 40px;
     padding: 30px;
+  }
+
+  .main-about__competence .main-about__text {
+    text-align: left;
   }
 
   .main-about__competence-title {
