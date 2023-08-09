@@ -25,6 +25,9 @@
     padding: 60px;
     border-radius: 25px;
     background-color: #E6F3FF;
+    background-image: url('../img/main-page/years-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &:hover {
       opacity: 1;
@@ -58,6 +61,11 @@
     text-transform: uppercase;
     color: var(--blue-color);
 
+    & .main-page__years-title {
+      display: inline;
+      color: var(--red-color);
+    }
+
     span {
       border-bottom: 3px solid transparent;
       font-size: 43px;
@@ -81,6 +89,10 @@
 
       span {
         font-size: 26px;
+      }
+
+      & .main-page__years-title {
+        padding: 0;
       }
     }
   }
@@ -296,11 +308,11 @@
       cursor: default;
 
       svg path {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
 
       svg circle {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
     }
   }
@@ -332,11 +344,11 @@
       cursor: default;
 
       svg path {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
 
       svg circle {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
     }
   }
@@ -428,7 +440,7 @@
   // .main-page__accessibility-pic
 
   &__accessibility-pic {
-    @media (max-width: $breakpoint1450) {
+    @media (max-width: 1300px) {
       margin-left: -200px;
     }
 
@@ -448,7 +460,7 @@
   // .main-page__accessibility-slider
 
   &__accessibility-slider {
-    max-width: 890px;
+    max-width: 736px;
     margin-left: 0;
     padding: 70px 20px 70px 60px;
 
@@ -564,11 +576,11 @@
       cursor: default;
 
       svg path {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
 
       svg circle {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
     }
   }
@@ -600,11 +612,11 @@
       cursor: default;
 
       svg path {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
 
       svg circle {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
     }
   }
@@ -620,6 +632,7 @@
   // .main-page__accessibility-descr
 
   &__accessibility-descr {
+    max-width: 577px;
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: 400;
@@ -655,7 +668,7 @@
       content: '';
       position: absolute;
       left: 0;
-      top: 6px;
+      top: 8px;
       width: 6px;
       min-width: 6px;
       height: 6px;
@@ -702,16 +715,29 @@
       font-size: 32px;
       color: var(--red-color);
     }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 28px;
+
+      span {
+        font-size: 28px;
+      }
+    }
   }
 
   // .main-page__articles-text
 
   &__articles-text {
+    max-width: 810px;
     margin-bottom: 40px;
     font-size: 20px;
     font-weight: 400;
     line-height: 135%;
     color: var(--blue-color);
+
+    @media (max-width: $breakpoint768) {
+      text-align: center;
+    }
   }
 
   // .main-page__articles-list
@@ -1191,6 +1217,20 @@
         stroke: var(--red-color);
       }
     }
+
+    &.swiper-button-disabled {
+      user-select: none;
+      pointer-events: none;
+      cursor: default;
+
+      svg path {
+        stroke: #E6E6E6;
+      }
+
+      svg circle {
+        stroke: #E6E6E6;
+      }
+    }
   }
 
   // .main-page__videos-arrow-next
@@ -1211,6 +1251,20 @@
 
       svg circle {
         stroke: var(--red-color);
+      }
+    }
+
+    &.swiper-button-disabled {
+      user-select: none;
+      pointer-events: none;
+      cursor: default;
+
+      svg path {
+        stroke: #E6E6E6;
+      }
+
+      svg circle {
+        stroke: #E6E6E6;
       }
     }
   }
@@ -1417,11 +1471,11 @@
       cursor: default;
 
       svg path {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
 
       svg circle {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
     }
   }
@@ -1453,11 +1507,11 @@
       cursor: default;
 
       svg path {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
 
       svg circle {
-        stroke: #939393;
+        stroke: #E6E6E6;
       }
     }
   }
@@ -2154,6 +2208,10 @@
       font-weight: 400;
       line-height: 140%;
       color: var(--red-color);
+    }
+
+    @media (max-width: $breakpoint992) {
+      max-width: 570px;
     }
   }
 }
