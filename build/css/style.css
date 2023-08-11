@@ -6,6 +6,12 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
+  src: url("../fonts/HelveticaNeueCyr-Medium.woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
   src: url("../fonts/helveticaneuecyr-bold.ttf");
   font-weight: 700;
 }
@@ -480,7 +486,7 @@ body {
 }
 
 .new-header__menu-sub-title {
-  font-weight: 550;
+  font-weight: 500;
   line-height: 135%;
   font-size: 29px;
   color: var(--blue-color);
@@ -587,7 +593,7 @@ body {
 }
 
 .new-header__questions-title {
-  font-weight: 550;
+  font-weight: 500;
   line-height: 135%;
   font-size: 26px;
   color: var(--blue-color);
@@ -1312,7 +1318,7 @@ body {
 
 .main-about__thanks-slide-name {
   font-size: 18px;
-  font-weight: 550;
+  font-weight: 500;
   line-height: 120%;
   color: var(--blue-color);
   -ms-text-overflow: ellipsis;
@@ -1649,7 +1655,7 @@ body {
 
 .main-about__revievs-slide-name {
   margin-bottom: 10px;
-  font-weight: 550;
+  font-weight: 500;
   line-height: 109%;
   font-size: 20px;
   color: var(--blue-color);
@@ -2146,14 +2152,14 @@ body {
 
 .main-page__accessibility-title {
   font-size: 48px;
-  font-weight: 550;
+  font-weight: 500;
   line-height: 120%;
   color: var(--blue-color);
 }
 
 .main-page__accessibility-title span {
   font-size: 48px;
-  font-weight: 550;
+  font-weight: 500;
   line-height: 120%;
   color: var(--red-color);
 }
@@ -3328,7 +3334,7 @@ body {
 
 .pick-up-points__list-title {
   margin-bottom: 15px;
-  font-weight: 550;
+  font-weight: 500;
   line-height: 120%;
   font-size: 20px;
   color: var(--blue-color);
