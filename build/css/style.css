@@ -101,6 +101,10 @@ html {
   overflow-x: hidden;
 }
 
+.new-main {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "HelveticaNeueCyr", sans-serif;
 }
