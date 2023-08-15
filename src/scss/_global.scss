@@ -61,3 +61,41 @@ body {
     opacity: 1;
   }
 }
+
+@keyframes firstSlideAnimation {
+  0% {
+    background-image: url('../img/main-page/slide-animation-bg.png');
+  }
+
+  50% {}
+
+  100% {
+    background-image: url('../img/main-page/slide-animation-bg.png');
+  }
+}
+
+@keyframes slidingAnimation {
+  0% {
+    left: 20%;
+  }
+
+  25% {
+    left: 70%;
+  }
+
+  50% {
+    left: 20%;
+  }
+
+  75% {
+    left: 70%;
+  }
+
+  90% {
+    left: 20%;
+  }
+
+  100% {
+    content: none;
+  }
+}
