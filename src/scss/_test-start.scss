@@ -1,0 +1,255 @@
+.test-start {
+  .main-about__revievs-add {
+    margin-left: 0;
+    margin-bottom: 90px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      width: 100%;
+    }
+
+  }
+
+  .main-about__descr {
+    margin-bottom: 0;
+  }
+}
+
+
+
+.test-stage {
+
+  // .test-stage__main
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    min-height: 634px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 16px;
+    border: 2px solid #D7E6F7;
+
+    @media (max-width: $breakpoint992) {
+      min-height: 400px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      min-height: 0;
+      padding: 20px;
+    }
+  }
+
+  &__main--mini {
+    min-height: 380px;
+
+    .main-about__revievs-add {
+      margin-top: auto;
+      margin-right: 0;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 20px;
+
+      .test-stage__title {
+        text-align: center;
+      }
+
+      .main-about__revievs-add {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // .test-stage__title
+
+  &__title {
+    margin-bottom: 60px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      text-align: left;
+    }
+  }
+
+  // .test-stage__radios
+
+  &__radios {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-left: 34px;
+    margin-bottom: 90px;
+
+    @media (max-width: $breakpoint992) {
+      margin-left: 0;
+    }
+
+    .pick-up-points__filter {
+      max-width: 544px;
+    }
+  }
+
+  // .test-stage__radio-input
+
+  &__radio-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -100;
+
+    &:checked~.test-stage__radio-label .test-stage__radio-circle::before {
+      opacity: 1;
+    }
+  }
+
+  // .test-stage__radio-label
+
+  &__radio-label {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    color: var(--blue-color);
+
+    cursor: pointer;
+  }
+
+  // .test-stage__radio-circle
+
+  &__radio-circle {
+    position: relative;
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+    border: 1px solid var(--blue-color);
+    border-radius: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 14px;
+      background-color: var(--red-color);
+      border-radius: 100%;
+      opacity: 0;
+    }
+  }
+
+  // .test-stage__btn
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    margin-top: auto;
+    margin-left: auto;
+    background-color: transparent;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+    color: var(--red-color);
+
+    svg {
+      transition: transform 0.2s linear;
+    }
+
+    &:hover {
+
+      svg {
+        transform: translateX(5px);
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-top: 0;
+      justify-content: flex-end;
+      column-gap: 10px;
+    }
+  }
+}
+
+
+.test-stage {
+
+  // .test-stage__btns
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+
+    // .test-stage__btn
+
+    .test-stage__btn {
+      margin: 0;
+
+      &.disabled {
+        user-select: none;
+        pointer-events: none;
+        filter: grayscale(1);
+        opacity: 0.1;
+      }
+
+      @media screen and (max-width: 639px) {
+        width: fit-content;
+      }
+    }
+  }
+
+
+
+  // .test-stage__btn--prev
+
+  &__btn--prev {
+    color: var(--blue-color);
+
+    & span {
+
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 40px;
+      color: var(--blue-color);
+
+      &:nth-child(2) {}
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      & span {
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:nth-child(3) {
+          display: flex;
+        }
+      }
+    }
+  }
+}
