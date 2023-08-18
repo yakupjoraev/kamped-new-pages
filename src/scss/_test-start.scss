@@ -80,6 +80,11 @@
     @media (max-width: $breakpoint768) {
       text-align: left;
     }
+
+    @media (max-width: $breakpoint480) {
+      max-width: 200px;
+      line-height: 33px;
+    }
   }
 
   // .test-stage__radios
@@ -250,6 +255,41 @@
           display: flex;
         }
       }
+    }
+  }
+}
+
+.main-about__descr {
+  @media (max-width: $breakpoint768) {
+    display: none;
+  }
+}
+
+.main-about__descr--mobile {
+  display: none;
+
+  @media (max-width: $breakpoint768) {
+    display: block;
+  }
+}
+
+.test-stage-1 {
+  .test-stage__title {
+    max-width: 500px;
+
+    @media (max-width: $breakpoint480) {
+      max-width: 200px;
+      line-height: 33px;
+    }
+  }
+}
+
+.test-stage-3 {
+  .test-stage__title {
+
+    @media (max-width: $breakpoint480) {
+      max-width: 260px;
+      margin: 0 auto 30px;
     }
   }
 }

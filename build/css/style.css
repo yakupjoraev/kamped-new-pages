@@ -4087,6 +4087,14 @@ body {
   display: none;
 }
 
+.main-about__descr--mobile {
+  display: none;
+}
+
+.test-stage-1 .test-stage__title {
+  max-width: 500px;
+}
+
 @media (min-width: 992px) {
   .main-page__info-slide:hover {
     -webkit-transform: scale(1.1);
@@ -5507,6 +5515,14 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+
+  .main-about__descr {
+    display: none;
+  }
+
+  .main-about__descr--mobile {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 639px) {
@@ -5604,6 +5620,21 @@ body {
 
   .test-start .main-about__revievs-add {
     width: 100%;
+  }
+
+  .test-stage__title {
+    max-width: 200px;
+    line-height: 33px;
+  }
+
+  .test-stage-1 .test-stage__title {
+    max-width: 200px;
+    line-height: 33px;
+  }
+
+  .test-stage-3 .test-stage__title {
+    max-width: 260px;
+    margin: 0 auto 30px;
   }
 }
 
