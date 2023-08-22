@@ -99,3 +99,48 @@ body {
     content: none;
   }
 }
+
+
+.fixbtn .open::before,
+.fixbtn-item::before {
+  content: "Получить помощь";
+  position: absolute;
+  font-size: 14px;
+  top: calc(100% + 0.8rem);
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+
+.fixbtn-item__review::before {
+  content: "Оставить благодар ность";
+  text-align: center;
+}
+
+
+.fixbtn .open,
+.fixbtn-item {
+  position: relative;
+  padding: 4px 8px;
+  margin-right: 10px;
+  width: 56px;
+  height: 48px;
+  background-color: #b8181c;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: url("../img/header/fb1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.fixbtn-item__review {
+  /* background-size: 2.3rem 2.3rem; */
+  background-image: url("../img/header/fb4.svg");
+  /* background-image: url(/local/templates/.default/img/static/fixbtn-review.svg); */
+}

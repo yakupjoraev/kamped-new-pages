@@ -1789,6 +1789,7 @@
   // .pick-up-points__filters
 
   &__filters {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
@@ -1804,13 +1805,22 @@
   // .pick-up-points__filter
 
   &__filter {
-    position: relative;
 
     img {
       position: absolute;
       bottom: 16px;
       right: 16px;
       cursor: pointer;
+    }
+
+    &.open-list {
+      position: relative;
+
+      .pick-up-points__filter-label,
+      .pick-up-points__filter-input {
+        position: relative;
+        z-index: 1;
+      }
     }
   }
 
@@ -1832,6 +1842,7 @@
     padding: 16px 40px 16px 16px;
     border-radius: 4px;
     border: 1px solid var(--primary-hover-fill, #D7E6F7);
+    outline: 0;
 
     font-weight: 400;
     line-height: normal;
@@ -2064,6 +2075,9 @@
 
   &__list-inner {
     overflow-y: auto;
+
+    scrollbar-color: var(--red-color) #C8C8C8;
+    scrollbar-width: thin;
 
     @media (max-width: $breakpoint768) {
       overflow: visible;
@@ -2652,5 +2666,61 @@
       margin-top: 0;
     }
 
+  }
+}
+
+
+
+
+
+
+
+.pick-up-points__city-wrapper {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: calc(100% + 30px);
+  padding: 120px 15px 20px 15px;
+
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+  background-color: #fff;
+}
+
+.pick-up-points__city-list {
+
+  max-height: 255px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+
+
+  scrollbar-color: var(--red-color) #C8C8C8;
+  scrollbar-width: thin;
+
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 16px;
+    background: #C8C8C8;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background: var(--red-color);
+  }
+}
+
+.pick-up-points__city-item {
+  cursor: pointer;
+
+  &:hover {
+    color: var(--red-color);
   }
 }
