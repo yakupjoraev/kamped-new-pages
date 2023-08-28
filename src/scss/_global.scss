@@ -114,6 +114,617 @@ body {
   transition: 0.375s ease all;
 }
 
+.fixbtn .open,
+.fixbtn-item {
+  position: relative;
+  padding: 4px 8px;
+  width: 56px;
+  height: 48px;
+  background-color: #b8181c;
+  -webkit-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-image: url("../img/static/fb1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 3.2rem 3.2rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.fixbtn .open:before,
+.fixbtn-item:before {
+  content: 'Получить помощь';
+  position: absolute;
+  font-size: 1.4rem;
+  top: -webkit-calc(100% + 0.8rem);
+  top: calc(100% + 0.8rem);
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.fixbtn .open:hover,
+.fixbtn-item:hover {
+  color: inherit;
+  -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  box-shadow: 0px 0px 0.5rem 0px #b8181c;
+}
+
+.fixbtn .open:active {
+  opacity: 0.75;
+}
+
+.fixbtn .close {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-image: url("../img/static/close_button-2.svg");
+  background-repeat: no-repeat;
+  background-size: 1.6rem 1.6rem;
+  background-position: center;
+  cursor: pointer;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+  background-color: #b8181c;
+  position: relative;
+  margin: 0.8rem auto;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.fixbtn .close:hover {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  box-shadow: 0px 0px 0.5rem 0px #b8181c;
+}
+
+.fixbtn .close:active {
+  opacity: 0.75;
+}
+
+.fixbtn.active {
+  right: 1.6rem;
+}
+
+.fixbtn.active .links {
+  -webkit-transition: 0.375s ease all;
+  -o-transition: 0.375s ease all;
+  transition: 0.375s ease all;
+  background-color: #fff;
+  width: auto;
+  height: auto;
+  -webkit-border-radius: 0.8rem;
+  border-radius: 0.8rem;
+  border: 1px solid #c4c4c4;
+  padding: 1.6rem 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  grid-row-gap: 2.4rem;
+  overflow: visible;
+}
+
+.fixbtn.active .links>*:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.fixbtn.active .links> :nth-child(1),
+.fixbtn.active .links> :nth-child(2),
+.fixbtn.active .links> :nth-child(3),
+.fixbtn.active .links> :nth-child(4),
+.fixbtn.active .links> :nth-child(5) {
+  opacity: 1;
+}
+
+.fixbtn.active .links> :nth-child(1) span,
+.fixbtn.active .links> :nth-child(2) span,
+.fixbtn.active .links> :nth-child(3) span,
+.fixbtn.active .links> :nth-child(4) span,
+.fixbtn.active .links> :nth-child(5) span {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-top: 0.4rem;
+  opacity: 1;
+}
+
+.fixbtn.active .links> :nth-child(1):before,
+.fixbtn.active .links> :nth-child(2):before,
+.fixbtn.active .links> :nth-child(3):before,
+.fixbtn.active .links> :nth-child(4):before,
+.fixbtn.active .links> :nth-child(5):before {
+  width: 5.6rem;
+  height: 4.8rem;
+  -webkit-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+  background-size: 3.2rem;
+}
+
+.fixbtn.active .open {
+  background-image: url("../img/static/close_button-2.svg");
+  background-repeat: no-repeat;
+  background-size: 1.6rem 1.6rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0.8rem auto;
+  background-position: center;
+}
+
+.fixbtn.active .open:before {
+  top: 100%;
+  content: 'Закрыть';
+  color: #fff;
+}
+
+.fixbtn .links {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+.fixbtn span {
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+  color: #000;
+  margin-top: 0;
+  white-space: pre;
+  display: inline-block;
+  opacity: 0;
+}
+
+.fixbtn .links> :nth-child(1) {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.fixbtn .links> :nth-child(1):before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  background-image: url("../img/static/fb1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0;
+  background-color: #b8181c;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.fixbtn .links> :nth-child(1):hover {
+  opacity: 1;
+}
+
+.fixbtn .links> :nth-child(1):hover:before {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  box-shadow: 0px 0px 0.5rem 0px #b8181c;
+}
+
+.fixbtn .links> :nth-child(1):active {
+  opacity: 0.75;
+}
+
+.fixbtn .links> :nth-child(2) {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.fixbtn .links> :nth-child(2):before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  background-image: url("../img/static/fb2.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0;
+  background-color: #b8181c;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.fixbtn .links> :nth-child(2):hover {
+  opacity: 1;
+}
+
+.fixbtn .links> :nth-child(2):hover:before {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  box-shadow: 0px 0px 0.5rem 0px #b8181c;
+}
+
+.fixbtn .links> :nth-child(2):active {
+  opacity: 0.75;
+}
+
+.fixbtn .links> :nth-child(3) {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.fixbtn .links> :nth-child(3):before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  background-image: url("../img/static/fb3.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0;
+  background-color: #b8181c;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.fixbtn .links> :nth-child(3):hover {
+  opacity: 1;
+}
+
+.fixbtn .links> :nth-child(3):hover:before {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  box-shadow: 0px 0px 0.5rem 0px #b8181c;
+}
+
+.fixbtn .links> :nth-child(3):active {
+  opacity: 0.75;
+}
+
+.fixbtn .links> :nth-child(4) {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.fixbtn .links> :nth-child(4):before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  background-image: url("../img/static/virtHelp.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0;
+  background-color: #b8181c;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.fixbtn .links> :nth-child(4):hover {
+  opacity: 1;
+}
+
+.fixbtn .links> :nth-child(4):hover:before {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  box-shadow: 0px 0px 0.5rem 0px #b8181c;
+}
+
+.fixbtn .links> :nth-child(4):active {
+  opacity: 0.75;
+}
+
+@media screen and (max-width: 680px) {
+
+  .fixbtn .open,
+  .fixbtn-item {
+    display: block;
+    width: 40px;
+    height: 32px;
+    background-size: 2.4rem 2.4rem;
+  }
+
+  .fixbtn .open:before,
+  .fixbtn-item:before {
+    font-size: 1.2rem;
+  }
+
+  .fixbtn .links {
+    overflow: hidden;
+    width: 0;
+    padding: 0;
+    border: none;
+    height: 0;
+  }
+
+  .fixbtn .links> :nth-child(1) {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+  }
+
+  .fixbtn .links> :nth-child(1):before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    background-image: url("../img/static/fb1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0;
+    background-color: #b8181c;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+
+  .fixbtn .links> :nth-child(1):hover {
+    opacity: 1;
+  }
+
+  .fixbtn .links> :nth-child(1):hover:before {
+    -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+    box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  }
+
+  .fixbtn .links> :nth-child(1):active {
+    opacity: 0.75;
+  }
+
+  .fixbtn .links> :nth-child(2) {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+  }
+
+  .fixbtn .links> :nth-child(2):before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    background-image: url("../img/static/fb2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0;
+    background-color: #b8181c;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+
+  .fixbtn .links> :nth-child(2):hover {
+    opacity: 1;
+  }
+
+  .fixbtn .links> :nth-child(2):hover:before {
+    -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+    box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  }
+
+  .fixbtn .links> :nth-child(2):active {
+    opacity: 0.75;
+  }
+
+  .fixbtn .links> :nth-child(3) {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+  }
+
+  .fixbtn .links> :nth-child(3):before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    background-image: url("../img/static/fb3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0;
+    background-color: #b8181c;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+
+  .fixbtn .links> :nth-child(3):hover {
+    opacity: 1;
+  }
+
+  .fixbtn .links> :nth-child(3):hover:before {
+    -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+    box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  }
+
+  .fixbtn .links> :nth-child(3):active {
+    opacity: 0.75;
+  }
+
+  .fixbtn .links> :nth-child(4) {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+  }
+
+  .fixbtn .links> :nth-child(4):before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    background-image: url("../img/static/virtHelp.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0;
+    background-color: #b8181c;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+
+  .fixbtn .links> :nth-child(4):hover {
+    opacity: 1;
+  }
+
+  .fixbtn .links> :nth-child(4):hover:before {
+    -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+    box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  }
+
+  .fixbtn .links> :nth-child(4):active {
+    opacity: 0.75;
+  }
+
+  .fixbtn.active .open {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+
+  .fixbtn.active .links {
+    padding: 3rem 3rem;
+    grid-row-gap: 1.6rem;
+    padding: 1.6rem;
+    -webkit-border-radius: 0.8rem;
+    border-radius: 0.8rem;
+    border: 1px solid #c4c4c4;
+  }
+
+  .fixbtn.active .links> :nth-child(1):before,
+  .fixbtn.active .links> :nth-child(2):before,
+  .fixbtn.active .links> :nth-child(3):before,
+  .fixbtn.active .links> :nth-child(4):before {
+    width: 4rem;
+    height: 3.2rem;
+    background-size: 3rem 3rem;
+  }
+
+  .fixbtn.active .links> :nth-child(1) span,
+  .fixbtn.active .links> :nth-child(2) span,
+  .fixbtn.active .links> :nth-child(3) span,
+  .fixbtn.active .links> :nth-child(4) span {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+}
+
 
 .fixbtn .open::before,
 .fixbtn-item::before {
