@@ -330,6 +330,14 @@
     }
 
     &:nth-child(4) {
+
+
+      @media (max-width: $breakpoint992) {
+        grid-column: span 4;
+      }
+    }
+
+    &:nth-child(5) {
       grid-column: span 3;
       justify-items: end;
 
@@ -414,4 +422,8 @@
   font-size: 14px;
   font-weight: normal;
   line-height: 2rem;
+}
+
+.new-footer__work--close {
+  color: var(--red-color);
 }

@@ -50,6 +50,11 @@ body {
 }
 
 
+a,
+a:visited {
+  text-decoration: none;
+}
+
 // Animations
 // Fade
 @keyframes fade {

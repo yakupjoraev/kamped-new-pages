@@ -555,9 +555,37 @@
   // .main-page__accessibility-header
 
   &__accessibility-header {
+    position: absolute;
+    top: 70px;
+    right: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    z-index: 2;
+
+    @media (max-width: $breakpoint992) {
+      top: 50px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      text-align: center;
+      justify-content: center;
+      top: 0;
+      bottom: 0;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  // .main-page__accessibility-title
+
+  &__accessibility-title {
+    max-width: 400px;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 120%;
+    color: var(--blue-color);
     margin-bottom: 48px;
 
     @media (max-width: $breakpoint992) {
@@ -566,18 +594,7 @@
 
     @media (max-width: $breakpoint768) {
       margin-bottom: 20px;
-      text-align: center;
-      justify-content: center;
     }
-  }
-
-  // .main-page__accessibility-title
-
-  &__accessibility-title {
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 120%;
-    color: var(--blue-color);
 
     span {
       font-size: 48px;
@@ -1993,6 +2010,10 @@
           width: 100%;
         }
       }
+
+      .pick-up-points__list-item {
+        transition: padding .2s linear;
+      }
     }
 
     &.points-map {
@@ -2114,6 +2135,8 @@
     height: 600px;
     padding: 0 20px 0 32px;
 
+    transition: 0.2s linear;
+
     @media (max-width: $breakpoint992) {
       padding: 0 16px 0 20px;
     }
@@ -2127,7 +2150,34 @@
   // .pick-up-points__list-item
 
   &__list-item {
+    position: relative;
     padding-bottom: 20px;
+    // margin-right: -20px;
+    margin-left: -20px;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: padding 0.2s linear, margin 0.2s linear;
+
+    &.active {
+      border: 1px solid var(--red-color);
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--red-color);
+      }
+
+      .pick-up-points__list-title {
+        color: var(--red-color);
+      }
+    }
+
+    &:hover {
+      .pick-up-points__list-title {
+        color: var(--red-color);
+        cursor: pointer;
+      }
+    }
 
     @media (max-width: $breakpoint768) {
       border-block-start: 15px;
@@ -2734,4 +2784,29 @@
   &:hover {
     color: var(--red-color);
   }
+}
+
+.location {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 10px;
+  margin-bottom: 12px;
+
+  h6 {
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    // padding-top: 2px;
+  }
+}
+
+.location__color {
+  width: 12px;
+  height: 12px;
+  border-radius: 45px;
+  display: inline-block;
+  margin-right: 2px;
+  border: 1px solid #bbbbbb;
 }
