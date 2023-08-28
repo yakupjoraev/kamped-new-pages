@@ -28,7 +28,7 @@
         <div class="new-header__top-block new-header__top-geo">
           <img class="new-header__top-pic" src="./img/header/geo.svg" alt="geo">
 
-          <a href="#" class="new-header__top-label">
+          <a href="#" class="new-header__top-label open-modal-btn" data-modal-id="city-select">
             Ваш регион
             <span class="new-header__top-region">Санкт-Петербург</span>
           </a>
@@ -107,7 +107,7 @@
         </a>
 
         <div class="new-header__adaptive">
-          <div class="new-header__adaptive-search">
+          <div class="new-header__adaptive-search  open-modal-btn" data-nav-item data-modal-id="search-site">
             <img class="new-header__adaptive-src-pic" src="./img/header/search.svg" alt="search">
           </div>
 
@@ -432,7 +432,7 @@
             </div>
           </li>
 
-          <li class="new-header__menu-item" data-nav-item>
+          <li class="new-header__menu-item open-modal-btn" data-nav-item data-modal-id="search-site">
             <a href="#" class="new-header__item-link new-header__item-link--src">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <g clip-path="url(#clip0_2101_3962)">
@@ -1500,6 +1500,256 @@
     </div>
   </div>
 </section>
+    <!-- Modal -->
+
+<!-- <button class="open-modal-btn" data-modal-id="city-select">Open Modal city-select</button> -->
+
+<div class="modal city-select" id="city-select">
+  <div class="modal-content">
+    <span class="close-modal-btn">&times;</span>
+    <div class="city-select__inner">
+      <h2 class="city-select__title">
+        Выберите ваш регион
+      </h2>
+
+      <ul class="city-select__list">
+
+        <li class="city-select__item city-select__item-no-resuts">
+          Поиск не дал результатов
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link city-select__link--bold" href="#">Москва</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link city-select__link--bold" href="#">Московская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link city-select__link--bold" href="#">Санкт-Петербург</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link city-select__link--bold" href="#">Ленинградская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Алтайский край</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Архангельская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Владимирская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link city-select__link--cheched" href="#">Волгоградская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Еврейская автономная область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Кабардино-Балкарская Республика</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Калининградская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Кировская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Костромская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Краснодарский край</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Курганская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Липецкая область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Ненецкий автономный округ</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Нижегородская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Омская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Оренбургская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Пензенская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Пермский край</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Республика Алтай</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Республика Башкортостан</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Республика Бурятия</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Республика Коми</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Республика Мордовия</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Республика Саха (Якутия)</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Республика Северная Осетия-Алания</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Республика Тыва</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Ростовская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Рязанская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Саратовская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Смоленская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Тверская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Тульская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Тюменская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Удмуртская Республика</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Ульяновская область</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Ханты-Мансийский АО</a>
+        </li>
+
+        <li class="city-select__item">
+          <a class="city-select__link" href="#">Ярославская область</a>
+        </li>
+
+      </ul>
+
+      <form class="city-select__form" action="#">
+        <input class="city-select__form-search" type="search" placeholder="Введите название региона">
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- <button class="open-modal-btn" data-modal-id="search-site">Open Modal search-site</button> -->
+
+<div class="modal search-site" id="search-site">
+  <div class="modal-content">
+    <span class="close-modal-btn">&times;</span>
+
+    <div class="container">
+      <div class="search-site__inner">
+        <aside class="search-site__aside">
+          <a class="search-site__aside-link" href="#">Все результаты</a>
+          <a class="search-site__aside-link" href="#">Система ОМС</a>
+          <a class="search-site__aside-link" href="#">Главная страница</a>
+          <a class="search-site__aside-link" href="#">О компании</a>
+          <a class="search-site__aside-link" href="#">Пресс-центр</a>
+          <a class="search-site__aside-link" href="#">Полис ОМС</a>
+          <a class="search-site__aside-link search-site__aside-link--red" href="#">
+            <img src="./img/search__where-new-block.svg" alt=" Справочный центр">
+            Справочный центр
+          </a>
+          <a class="search-site__aside-link" href="#">Школа пациента</a>
+          <a class="search-site__aside-link" href="#">Научно-практическая деятельность</a>
+          <a class="search-site__aside-link" href="#">Диспансеризация</a>
+          <a class="search-site__aside-link" href="#">Защита прав</a>
+        </aside>
+
+        <div class="search-site__content">
+          <div class="search-site__top">
+            <h2 class="search-site__title">
+              Поиск по сайту
+            </h2>
+
+            <form class="search-site__form" action="#">
+              <input class="search-site__search" type="search" placeholder="Поиск">
+              <button type="button" class="search-site__btn">Поиск <span>→</span></button>
+            </form>
+
+            <div class="search-site__popular">
+              <p class="search-site__popular-label">
+                Популярные запросы:
+              </p>
+
+              <div class="search-site__popular-list">
+                <div class="search-site__popular-item">Оформить полис</div>
+
+                <span> , </span>
+
+                <div class="search-site__popular-item">Страховые представители</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-site__bottom"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
   </main>
 
   <!-- Footer -->

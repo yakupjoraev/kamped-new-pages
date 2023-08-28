@@ -945,6 +945,12 @@
   &__articles-img {
     display: flex;
     justify-content: center;
+    height: 200px;
+    width: 100%;
+
+    img {
+      object-fit: cover;
+    }
   }
 
   // .main-page__articles-item--blue
@@ -974,6 +980,7 @@
   // .main-page__articles-all
 
   &__articles-all {
+    grid-column: span 3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1210,6 +1217,8 @@
 
   &__news-pic {
     width: 100%;
+    height: 192px;
+    object-fit: cover;
   }
 
   // .main-page__articles-all
@@ -2329,9 +2338,10 @@
 }
 
 .main-page__news-company {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 32px;
+  row-gap: 32px;
   margin-bottom: 40px;
 
   @media (max-width: $breakpoint992) {
@@ -2341,6 +2351,7 @@
   @media (max-width: $breakpoint768) {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 20px;
+    column-gap: 20px;
   }
 }
 

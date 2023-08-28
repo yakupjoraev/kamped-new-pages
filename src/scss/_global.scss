@@ -100,6 +100,20 @@ body {
   }
 }
 
+.fixbtn {
+  position: fixed;
+  z-index: 151;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
+  -webkit-transition: 0.375s ease all;
+  -o-transition: 0.375s ease all;
+  transition: 0.375s ease all;
+}
+
 
 .fixbtn .open::before,
 .fixbtn-item::before {
