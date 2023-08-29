@@ -165,6 +165,7 @@
   // .city-select__form
 
   &__form {
+    margin-bottom: 0;
     margin-top: auto;
   }
 
@@ -182,7 +183,7 @@
     box-shadow: none;
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
-    height: 48px;
+    height: 48px !important;
     padding: 6px 10px;
     width: 100%;
 
@@ -221,7 +222,9 @@
   }
 
   .close-modal-btn {
-    font-size: 46px;
+    top: 20px;
+    right: 20px;
+    font-size: 48px;
   }
 
   // .search-site__inner
@@ -293,14 +296,15 @@
     display: flex;
     align-items: center;
     width: 100%;
+    margin: 0;
   }
 
   // .search-site__search
 
   &__search {
-    height: 64px;
+    height: 64px !important;
     width: 100%;
-    padding-left: 17px;
+    padding-left: 17px !important;
     font: normal 16px 'HelveticaNeueCyr';
 
     border-right: 0;

@@ -1,0 +1,12 @@
+.headerMenu.desktop .blue-item__submenu.submenu {
+  top: -webkit-calc(100% - 1px) !important;
+  top: calc(100% - 1px) !important;
+}
+
+.headerMenu.desktop .blue-item.hovered .blue-item__submenu.submenu {
+  padding: 20px 18px !important;
+}
+
+.headerMenu.desktop .blue-item__submenu.submenu {
+  box-shadow: none !important;
+}

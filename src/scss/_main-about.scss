@@ -44,13 +44,16 @@
     flex-direction: column;
     row-gap: 16px;
     padding: 20px;
+    margin: 0;
     border-radius: 16px;
     background-color: #E6F3FF;
   }
 
   // .main-about__aside-item
 
-  &__aside-item {}
+  &__aside-item {
+    margin: 0;
+  }
 
   // .main-about__aside-link
 
@@ -219,6 +222,7 @@
 
   &__director-pic {
     width: 160px;
+    min-width: 160px;
     height: 160px;
     object-fit: contain;
     margin-bottom: 22px;
@@ -226,6 +230,7 @@
 
     @media (max-width: $breakpoint992) {
       width: 122px;
+      min-width: 122px;
       height: 122px;
       margin-bottom: 0;
     }
@@ -463,6 +468,7 @@
     align-items: flex-start;
     justify-content: space-between;
     column-gap: 20px;
+    margin: 0;
 
     @media (max-width: $breakpoint768) {
       flex-direction: column;
@@ -478,6 +484,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 5px;
+    margin: 0;
   }
 
   // .main-about__availability-item-count
@@ -523,6 +530,7 @@
     align-items: flex-start;
     justify-content: space-between;
     column-gap: 20px;
+    margin: 0;
     margin: 40px 0 32px;
 
     @media (max-width: $breakpoint992) {
@@ -544,6 +552,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    margin: 0;
 
     &:nth-child(2) {
       @media (max-width: $breakpoint768) {
@@ -696,6 +705,7 @@
     align-content: baseline;
     row-gap: 30px;
     padding: 30px;
+    margin: 0;
     border-radius: 16px;
     border: 2px solid #D7E6F7;
 
@@ -758,6 +768,7 @@
     display: grid;
     align-content: baseline;
     padding: 30px;
+    margin: 0;
     border-radius: 16px;
     background-color: #E6F3FF;
   }

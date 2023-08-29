@@ -71,30 +71,54 @@ function showSublist() {
       let subMenu = navItem.querySelector('.new-header__menu-sub');
       let timeout;
 
-      document.querySelector('[data-nav-item-close]').addEventListener('click', () => {
-        navItem.classList.remove('show')
-      })
+      let closeButton = navItem.querySelector('[data-nav-item-close]');
+      if (closeButton) {
+        closeButton.addEventListener('click', () => {
+          navItem.classList.remove('show');
+        });
+      }
 
       navItem.addEventListener('mouseenter', () => {
-        clearTimeout(timeout); // Очищаем предыдущий таймер, если есть
+        clearTimeout(timeout);
         navItem.classList.add('show');
       });
 
       navItem.addEventListener('mouseleave', () => {
         timeout = setTimeout(() => {
           navItem.classList.remove('show');
-        }, 200); // Задержка в 200 миллисекунд (0.2 секунды)
+        }, 200);
       });
     });
-
-
   }
-
 }
 
 showSublist();
 
 
+const filterInputs = document.querySelectorAll('[data-pick-up-points-filter-input]');
+const filterContainers = document.querySelectorAll('[data-pick-up-points-filter]');
+
+filterInputs.forEach((input, index) => {
+  input.addEventListener('input', () => {
+    if (input.value.trim() !== '') {
+      filterContainers[index].classList.add('open-list');
+    } else {
+      filterContainers[index].classList.remove('open-list');
+    }
+  });
+});
+
+document.addEventListener('click', (event) => {
+  filterContainers.forEach(container => {
+    if (!container.contains(event.target)) {
+      container.classList.remove('open-list');
+      const input = container.querySelector('[data-pick-up-points-filter-input]');
+      if (input) {
+        input.value = ''; // Clear the input field
+      }
+    }
+  });
+});
 
 
 function newsTab() {

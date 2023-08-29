@@ -173,6 +173,7 @@
 
   &__benefits-item {
     display: grid;
+    margin: 0;
   }
 
   // .main-page__benefits-link
@@ -859,6 +860,7 @@
   &__articles-item {
     display: grid;
     border-radius: 16px;
+    margin: 0;
   }
 
   // .main-page__articles-item--green
@@ -1124,6 +1126,7 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: 32px;
     column-gap: 32px;
+    margin: 0;
 
     @media (max-width:1100px) {
       grid-template-columns: repeat(2, 1fr);
@@ -1139,6 +1142,7 @@
 
   &__news-item {
     display: grid;
+    margin: 0;
     transition: filter 0.2s linear;
 
     @media (max-width:1100px) {
@@ -1790,9 +1794,12 @@
     justify-content: center;
     align-items: center;
     width: fit-content;
+    height: 56px;
 
     padding: 20px 30px;
+    margin: 0;
     border-radius: 50px;
+    border: 0;
     background-color: var(--blue-color);
 
     white-space: nowrap;
@@ -1831,6 +1838,7 @@
   // .pick-up-points__filter
 
   &__filter {
+    position: relative;
 
     img {
       position: absolute;
@@ -1840,7 +1848,11 @@
     }
 
     &.open-list {
-      position: relative;
+      z-index: 4;
+
+      .pick-up-points__city-wrapper {
+        display: block;
+      }
 
       .pick-up-points__filter-label,
       .pick-up-points__filter-input {
@@ -1865,10 +1877,12 @@
 
   &__filter-input {
     width: 100%;
-    padding: 16px 40px 16px 16px;
-    border-radius: 4px;
-    border: 1px solid var(--primary-hover-fill, #D7E6F7);
-    outline: 0;
+    height: 56px !important;
+    padding: 16px 40px 16px 16px !important;
+    margin: 0;
+    border-radius: 4px !important;
+    border: 1px solid var(--primary-hover-fill, #D7E6F7) !important;
+    outline: 0 !important;
 
     font-weight: 400;
     line-height: normal;
@@ -1904,7 +1918,9 @@
     display: flex;
     align-items: center;
     column-gap: 15px;
+    height: 44px;
     padding: 10px 20px;
+    margin: 0;
 
     border-radius: 50px;
     border: 1px solid #D7E6F7;
@@ -2134,6 +2150,7 @@
   &__list-list {
     height: 600px;
     padding: 0 20px 0 32px;
+    margin: 0;
 
     transition: 0.2s linear;
 
@@ -2152,6 +2169,7 @@
   &__list-item {
     position: relative;
     padding-bottom: 20px;
+    margin: 0;
     // margin-right: -20px;
     margin-left: -20px;
     padding: 20px;
@@ -2651,6 +2669,7 @@
     flex: 0 1 544px;
     display: grid;
     padding: 30px;
+    margin: 0;
     border-radius: 16px;
     background-color: var(--white-color);
 
@@ -2709,13 +2728,16 @@
 
   &__contacts-form-btn {
     margin-top: 10px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px 30px;
     border-radius: 50px;
     background: var(--red-color);
+    border: 0;
 
+    white-space: normal;
     text-align: center;
     font-size: 16px;
     font-style: normal;
@@ -2737,6 +2759,7 @@
 
 
 .pick-up-points__city-wrapper {
+  display: none;
   position: absolute;
   top: -15px;
   left: -15px;
@@ -2746,6 +2769,10 @@
   -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
   background-color: #fff;
+
+  @media (max-width: $breakpoint480) {
+    padding-top: 140px;
+  }
 }
 
 .pick-up-points__city-list {
