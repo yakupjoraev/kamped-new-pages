@@ -1,4 +1,4 @@
-<section class="main-about test-stage test-stage-2">
+<section class="main-about">
   <div class="container">
     <div class="main-about__inner">
       <aside class="main-about__aside">
@@ -37,24 +37,59 @@
         <img class="main-about__aside-pic" src="./img/main-about/main-about-aside.png" alt="aside pic">
       </aside>
 
-      <form action="#" class="test-stage__main">
-        <h1 class="test-stage__title main-about__subtitle">
-          Выберите регион, в котором Вы получили медицинскую помощь
-        </h1>
+      <div class="test-stage">
+        <form action="#" class="test-stage__main">
+          <h1 class="test-stage__title main-about__subtitle">
+            Выберите регион, в котором Вы получили медицинскую помощь
+          </h1>
 
-        <div class="test-stage__radios">
-          <div class="pick-up-points__filter" data-pick-up-points-filter>
-            <label class="pick-up-points__filter-label" for="pick-up-points-cities">
-              Населенный пункт
-            </label>
+          <div class="test-stage__radios">
+            <div class="pick-up-points__filter" data-pick-up-points-filter>
+              <label class="pick-up-points__filter-label" for="pick-up-points-cities">
+                Населенный пункт
+              </label>
 
-            <input class="pick-up-points__filter-input" type="text" placeholder="Все в регионе"
-              id="pick-up-points-cities" data-pick-up-points-filter-input>
+              <input class="pick-up-points__filter-input" type="text" placeholder="Все в регионе"
+                id="pick-up-points-cities" data-pick-up-points-filter-input>
 
 
-            <img src="./img/main-page/chevron-down.svg" alt="">
+              <img src="./img/main-page/chevron-down.svg" alt="">
 
-            <div class="pick-up-points__city-wrapper">
+              <div class="pick-up-points__city-wrapper">
+                <ul class="pick-up-points__city-list">
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                  <li class="pick-up-points__city-item">Город</li>
+                </ul>
+              </div>
+            </div>
+
+
+
+            <!-- Тут еще один список. без стрелки. -->
+
+
+            <div class="pick-up-points__filter open-list">
+              <label class="pick-up-points__filter-label" for="pick-up-points-cities3">
+                Населенный пункт
+              </label>
+
+              <input class="pick-up-points__filter-input" type="text" placeholder="Все в регионе"
+                id="pick-up-points-cities3">
+
               <ul class="pick-up-points__city-list">
                 <li class="pick-up-points__city-item">Город</li>
                 <li class="pick-up-points__city-item">Город</li>
@@ -74,34 +109,36 @@
                 <li class="pick-up-points__city-item">Город</li>
               </ul>
             </div>
+
           </div>
-        </div>
 
-        <div class="test-stage__btns">
-          <button type="button" class="test-stage__btn test-stage__btn--prev">
-            <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M0.939341 10.9393C0.353554 11.5251 0.353554 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.80761 11.0711 0.80761 10.4853 1.3934L0.939341 10.9393ZM27 10.5L2 10.5L2 13.5L27 13.5L27 10.5Z"
-                fill="#193C6D" />
-            </svg>
+          <div class="test-stage__btns">
+            <button type="button" class="test-stage__btn test-stage__btn--prev">
+              <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.939341 10.9393C0.353554 11.5251 0.353554 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.80761 11.0711 0.80761 10.4853 1.3934L0.939341 10.9393ZM27 10.5L2 10.5L2 13.5L27 13.5L27 10.5Z"
+                  fill="#193C6D" />
+              </svg>
 
 
-            <span> Предыдущий вопрос</span>
-            <span>Назад</span>
-          </button>
+              <span> Предыдущий вопрос</span>
+              <span>Назад</span>
+            </button>
 
-          <button type="button" class="test-stage__btn disabled">
-            Дальше
+            <button type="button" class="test-stage__btn disabled">
+              Дальше
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
-              <path
-                d="M26.0607 13.0607C26.6464 12.4749 26.6464 11.5251 26.0607 10.9393L16.5147 1.3934C15.9289 0.807613 14.9792 0.807613 14.3934 1.3934C13.8076 1.97919 13.8076 2.92893 14.3934 3.51472L22.8787 12L14.3934 20.4853C13.8076 21.0711 13.8076 22.0208 14.3934 22.6066C14.9792 23.1924 15.9289 23.1924 16.5147 22.6066L26.0607 13.0607ZM-1.31134e-07 13.5L25 13.5L25 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z"
-                fill="#B8181C" />
-            </svg>
-          </button>
-        </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                <path
+                  d="M26.0607 13.0607C26.6464 12.4749 26.6464 11.5251 26.0607 10.9393L16.5147 1.3934C15.9289 0.807613 14.9792 0.807613 14.3934 1.3934C13.8076 1.97919 13.8076 2.92893 14.3934 3.51472L22.8787 12L14.3934 20.4853C13.8076 21.0711 13.8076 22.0208 14.3934 22.6066C14.9792 23.1924 15.9289 23.1924 16.5147 22.6066L26.0607 13.0607ZM-1.31134e-07 13.5L25 13.5L25 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z"
+                  fill="#B8181C" />
+              </svg>
+            </button>
+          </div>
 
-      </form>
+        </form>
+      </div>
+
     </div>
   </div>
 </section>

@@ -157,7 +157,7 @@ newsTab();
 
 
 function newAccardion() {
-  const container = document.querySelector('.new-questions-accordion');
+  const container = document.querySelector('[data-accordion-wrapper]');
 
   if (!container) {
     return null
