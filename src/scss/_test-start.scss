@@ -169,6 +169,9 @@
     margin-top: auto;
     margin-left: auto;
     background-color: transparent;
+    border: 0;
+    height: auto;
+    padding: 0;
 
     font-size: 20px;
     font-weight: 700;
@@ -179,7 +182,15 @@
       transition: transform 0.2s linear;
     }
 
+    &:active,
+    &:focus {
+      background-color: transparent;
+      color: var(--red-color);
+    }
+
     &:hover {
+      background-color: transparent;
+      color: var(--red-color);
 
       svg {
         transform: translateX(5px);

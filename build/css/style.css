@@ -4368,6 +4368,9 @@ a:visited {
   margin-top: auto;
   margin-left: auto;
   background-color: transparent;
+  border: 0;
+  height: auto;
+  padding: 0;
   font-size: 20px;
   font-weight: 700;
   line-height: 40px;
@@ -4380,6 +4383,17 @@ a:visited {
   -o-transition: transform 0.2s linear;
   transition: transform 0.2s linear;
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.test-stage__btn:active,
+.test-stage__btn:focus {
+  background-color: transparent;
+  color: var(--red-color);
+}
+
+.test-stage__btn:hover {
+  background-color: transparent;
+  color: var(--red-color);
 }
 
 .test-stage__btn:hover svg {
