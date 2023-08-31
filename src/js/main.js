@@ -400,3 +400,28 @@ function modals() {
 
 modals();
 
+document.addEventListener('DOMContentLoaded', function () {
+  const fixedBtnCall = document.querySelector('[ data-fixed-btns-call]');
+  const fixedBtns = document.querySelector('[data-fixed-btns]');
+  const fixedBtnsClose = document.querySelector('[ data-fixed-btns-close]');
+  const body = document.body;
+
+  fixedBtnCall.addEventListener('click', function (event) {
+    event.preventDefault();
+    fixedBtns.classList.add('opened-fixed-btns');
+    body.classList.add('opened-fixed-btns');
+  });
+
+  fixedBtnsClose.addEventListener('click', function (event) {
+    fixedBtns.classList.remove('opened-fixed-btns');
+    body.classList.remove('opened-fixed-btns');
+  });
+
+  document.addEventListener('click', function (event) {
+    const isFixedBtns = event.target.closest('.fixed-btns');
+    if (!isFixedBtns) {
+      fixedBtns.classList.remove('opened-fixed-btns');
+      body.classList.remove('opened-fixed-btns');
+    }
+  })
+})
