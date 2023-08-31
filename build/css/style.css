@@ -271,6 +271,7 @@ a:visited {
   padding: 16px 10px;
   border: 1px solid #c4c4c4;
   background-color: #fff;
+  border-radius: 8px;
   text-align: center;
   margin: 0;
 }
@@ -4897,6 +4898,13 @@ a:visited {
 
 .search-site__form {
   position: relative;
+  width: 100%;
+  margin: 0;
+  z-index: 2;
+}
+
+.search-site__form-searching {
+  position: relative;
   margin-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4905,7 +4913,6 @@ a:visited {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin: 0;
 }
 
 .search-site__search {
@@ -4969,6 +4976,7 @@ a:visited {
   -o-transition: 0.4s;
   transition: 0.4s;
   border-radius: 0px 4px 4px 0;
+  margin: 0;
 }
 
 .search-site__btn:hover {
@@ -5125,6 +5133,70 @@ a:visited {
 .search-site__result-total span {
   font-size: 27px;
   color: #313131;
+}
+
+.search-site__form-searching.open-list {
+  border-bottom: 0;
+}
+
+.search-site__form-searching.open-list .search-site__search {
+  border-radius: 4px 4px 0 0 !important;
+  border-bottom: 0 !important;
+  outline: 0 !important;
+}
+
+.search-site__form-searching.open-list .search-site__search:active,
+.search-site__form-searching.open-list .search-site__search:focus {
+  border-color: #d1d1d1 !important;
+}
+
+.search-site__form-searching.open-list ~ .search-site__search-results {
+  max-height: 400px;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.search-site__search-results {
+  position: absolute;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  top: 100%;
+  margin: 0;
+  border-left: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+  background-color: #fff;
+  -webkit-transition: max-height 0.3s linear;
+  -o-transition: max-height 0.3s linear;
+  transition: max-height 0.3s linear;
+  scrollbar-color: var(--red-color) #C8C8C8;
+  scrollbar-width: thin;
+}
+
+.search-site__search-results::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 16px;
+}
+
+.search-site__search-results::-webkit-scrollbar-track {
+  border-radius: 16px;
+  background: #C8C8C8;
+}
+
+.search-site__search-results::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  background: var(--red-color);
+}
+
+.search-site__search-result {
+  margin: 0;
+  padding: 10px;
+  padding-left: 17px;
+  cursor: pointer;
+}
+
+.search-site__search-result:hover {
+  background-color: #f2f6fe;
 }
 
 .new-footer {
