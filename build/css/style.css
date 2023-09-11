@@ -3721,18 +3721,11 @@ a:visited {
   width: 100%;
 }
 
-.pick-up-points__map {
-  -webkit-transition: width 0.5s linear, -webkit-box-flex 0.5s linear;
-  transition: width 0.5s linear, -webkit-box-flex 0.5s linear;
-  -o-transition: width 0.5s linear, flex 0.5s linear;
-  transition: width 0.5s linear, flex 0.5s linear;
-  transition: width 0.5s linear, flex 0.5s linear, -webkit-box-flex 0.5s linear, -ms-flex 0.5s linear;
-}
-
 .pick-up-points__map-map {
   width: 100%;
   height: 100%;
-  background-color: #5CFF74;
+  background: url("../img/main-page/map-background.jpeg");
+  background-size: contain;
 }
 
 .pick-up-points__list {
@@ -3740,11 +3733,6 @@ a:visited {
   padding: 32px 0;
   border-radius: 0px 25px 25px 0px;
   background-color: rgba(215, 230, 247, 0.2);
-  -webkit-transition: width 0.5s linear, -webkit-box-flex 0.5s linear;
-  transition: width 0.5s linear, -webkit-box-flex 0.5s linear;
-  -o-transition: width 0.5s linear, flex 0.5s linear;
-  transition: width 0.5s linear, flex 0.5s linear;
-  transition: width 0.5s linear, flex 0.5s linear, -webkit-box-flex 0.5s linear, -ms-flex 0.5s linear;
 }
 
 .pick-up-points__list .main-page__articles-all {
@@ -4650,6 +4638,20 @@ a:visited {
   opacity: 1;
 }
 
+.modal-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .modal-content {
   background-color: white;
   margin: 10% auto;
@@ -4828,6 +4830,10 @@ a:visited {
   overflow-y: auto;
 }
 
+.search-site .modal-content .new-header__questions-accordion {
+  max-height: initial;
+}
+
 .search-site .close-modal-btn {
   top: 20px;
   right: 20px;
@@ -4897,7 +4903,6 @@ a:visited {
 
 .search-site__form {
   position: relative;
-  margin-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4906,6 +4911,28 @@ a:visited {
           align-items: center;
   width: 100%;
   margin: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.search-site__form__suggest-block {
+  position: relative;
+  width: 100%;
+  top: -3px;
+}
+
+.search-site__form__suggest-block__container {
+  padding: 5px;
+  background-color: white;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  border-color: black;
+}
+
+.search-site__form__suggest-block__item {
+  padding: 10px;
+  cursor: pointer;
 }
 
 .search-site__search {
@@ -4954,6 +4981,7 @@ a:visited {
   background: #b8181c;
   position: absolute;
   z-index: 1;
+  top: 0;
   right: 0;
   color: #fff;
   cursor: pointer;
@@ -5021,8 +5049,168 @@ a:visited {
   cursor: pointer;
 }
 
+.search-site .new-accordion-f-a-q__item-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  font-family: var(--font-family, sans-serif);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  color: #4D5759;
+}
+
+.search-site .new-accordion-f-a-q-form {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.search-site .new-accordion-f-a-q-form__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+}
+
+.search-site .new-accordion-f-a-q-form__text {
+  margin-right: 40px;
+  font-size: 16px;
+  line-height: 135%;
+  color: #4D5759;
+}
+
+.search-site .new-accordion-f-a-q-form__label {
+  cursor: pointer;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+
+.search-site .new-accordion-f-a-q-form__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
+}
+
+.search-site .new-accordion-f-a-q-form__desc span {
+  margin-right: 5px;
+}
+
+.search-site .new-accordion-f-a-q-form__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  width: 130px;
+  height: 32px;
+  border: 1px solid #969696;
+  border-radius: 2px;
+  font-size: 16px;
+  color: #4D5759;
+}
+
+.search-site .search-site__result-list-main__item {
+  margin-bottom: 20px;
+}
+
+.search-site .search-site__result-list-main__item-title {
+  display: block;
+  font-size: 16px;
+  color: #b70d18;
+  margin-bottom: 5px;
+}
+
+.search-site .search-site__result-list-main__item-description {
+  font-size: 17px;
+  line-height: 24px;
+  color: #313131;
+}
+
+.search-site .search-site__result-list-main__item-footer {
+  color: #939393;
+  font-size: 12px;
+}
+
 .search-site__aside-link--red {
   color: var(--red-color);
+}
+
+.search-site__not_found-block__title {
+  color: #909090;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.search-site__not_found-block-offers__title {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.search-site__not_found-block-offers__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.search-site__not_found-block-offers__item {
+  max-width: 50%;
+  padding: 27px 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 170px;
+  border: 1px solid #D1D1D1;
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+
+.search-site__not_found-block-offers__item__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.search-site__not_found-block-offers__item__header {
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 14px;
+}
+
+.search-site__not_found-block-offers__item__description {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.search-site > div {
+  width: 100%;
 }
 
 .search-site__result-list {
