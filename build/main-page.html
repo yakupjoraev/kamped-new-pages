@@ -2999,285 +2999,420 @@
 <!-- <button class="open-modal-btn" data-modal-id="search-site">Open Modal search-site</button> -->
 
 <div class="modal search-site" id="search-site">
-  <div class="modal-content">
-    <span class="close-modal-btn">&times;</span>
+  <div class="modal-container">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
 
-    <div class="container">
-      <div class="search-site__inner">
-        <aside class="search-site__aside">
-          <a class="search-site__aside-link" href="#">Все результаты</a>
-          <a class="search-site__aside-link" href="#">Система ОМС</a>
-          <a class="search-site__aside-link" href="#">Главная страница</a>
-          <a class="search-site__aside-link" href="#">О компании</a>
-          <a class="search-site__aside-link" href="#">Пресс-центр</a>
-          <a class="search-site__aside-link" href="#">Полис ОМС</a>
-          <a class="search-site__aside-link search-site__aside-link--red" href="#">
-            <img src="./img/search__where-new-block.svg" alt=" Справочный центр">
-            Справочный центр
-          </a>
-          <a class="search-site__aside-link" href="#">Школа пациента</a>
-          <a class="search-site__aside-link" href="#">Научно-практическая деятельность</a>
-          <a class="search-site__aside-link" href="#">Диспансеризация</a>
-          <a class="search-site__aside-link" href="#">Защита прав</a>
-        </aside>
-
-        <div class="search-site__content">
-          <div class="search-site__top">
-            <h2 class="search-site__title">
-              Поиск по сайту
-            </h2>
-
-            <form class="search-site__form" action="#">
-              <input class="search-site__search" type="search" placeholder="Поиск">
-              <button type="button" class="search-site__btn">Поиск <span>→</span></button>
-            </form>
-
-            <div class="search-site__popular">
-              <p class="search-site__popular-label">
-                Популярные запросы:
-              </p>
-
-              <div class="search-site__popular-list">
-                <div class="search-site__popular-item">Оформить полис</div>
-
-                <span> , </span>
-
-                <div class="search-site__popular-item">Страховые представители</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="search-site__result">
-
-            <a href="#" class="search-site__result-polic">
-              <div class="search-site__result-pic">
-                <img src="./img/search__polic.svg" alt="search__polic">
-              </div>
-
-              <div class="search-site__result-texts">
-                <p class="search-site__result-label">Оформление полиса</p>
-                <p class="search-site__result-descr">Узнайте как оформить полис легко и быстро</p>
-              </div>
-
-              <div class="search-site__result-arrow"> →</div>
+      <div class="container">
+        <div class="search-site__inner">
+          <aside class="search-site__aside">
+            <a class="search-site__aside-link" href="#">Все результаты (100)</a>
+            <a class="search-site__aside-link" href="#">Система ОМС (20)</a>
+            <a class="search-site__aside-link" href="#">Главная страница</a>
+            <a class="search-site__aside-link" href="#">О компании</a>
+            <a class="search-site__aside-link" href="#">Пресс-центр</a>
+            <a class="search-site__aside-link" href="#">Полис ОМС</a>
+            <a class="search-site__aside-link search-site__aside-link--red" href="#">
+              <img src="./img/search__where-new-block.svg" alt=" Справочный центр">
+              Справочный центр (3)
             </a>
+            <a class="search-site__aside-link" href="#">Школа пациента</a>
+            <a class="search-site__aside-link" href="#">Научно-практическая деятельность (3)</a>
+            <a class="search-site__aside-link" href="#">Диспансеризация</a>
+            <a class="search-site__aside-link" href="#">Защита прав</a>
+          </aside>
 
-            <div class="search-site__result-total">
-              По запросу <span>"Полис" </span>найдено<span> 797 ответов</span>
+          <div class="search-site__content">
+            <div class="search-site__top">
+              <h2 class="search-site__title">
+                Поиск по сайту
+              </h2>
+
+              <form class="search-site__form" action="#">
+                <input class="search-site__search" type="search" placeholder="Поиск">
+                <button type="button" class="search-site__btn">Поиск <span>→</span></button>
+                <div class="search-site__form__suggest-block">
+                  <div class="search-site__form__suggest-block__container">
+                    <div class="search-site__form__suggest-block__item">
+                      Оформить полис
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <div class="search-site__popular">
+                <p class="search-site__popular-label">
+                  Популярные запросы:
+                </p>
+
+                <div class="search-site__popular-list">
+                  <div class="search-site__popular-item">Оформить полис</div>
+
+                  <span> , </span>
+
+                  <div class="search-site__popular-item">Страховые представители</div>
+                </div>
+              </div>
             </div>
 
+            <div class="search-site__result">
+              <div class="search-site__not_found-block">
+                <p class="search-site__not_found-block__title">
+                  К сожалению, ничего не найдено.
+                </p>
+              </div>
 
-            <ul class="search-site__result-list main-page__articles-list">
-              <li class="main-page__articles-item main-page__articles-item--green">
-                <a class="main-page__articles-link" href="#">
-                  <div class="main-page__articles-info">
-                    <div class="main-page__articles-header">
-                      <h5 class="main-page__articles-label">
-                        Профилактика и реабилитация
-                      </h5>
+              <div class="search-site__not_found-block-offers">
+                <p class="search-site__not_found-block-offers__title">
+                  Возможно вас заинтересует:
+                </p>
+                <div class="search-site__not_found-block-offers__container">
+                  <a href="" class="search-site__not_found-block-offers__item">
+                    <div class="search-site__not_found-block-offers__item__icon">
+                      <img src="./img/search__polic.svg" alt="search__polic">
+                    </div>
+                    <div class="search-site__not_found-block-offers__item__content">
+                      <p class="search-site__not_found-block-offers__item__header">Оформление полиса</p>
+                      <p class="search-site__not_found-block-offers__item__description">Узнайте как оформить полис легко и быстро</p>
+                    </div>
+                  </a>
+                  <a href="" class="search-site__not_found-block-offers__item">
+                    <div class="search-site__not_found-block-offers__item__icon">
+                      <img src="./img/search__polic.svg" alt="search__polic">
+                    </div>
+                    <div class="search-site__not_found-block-offers__item__content">
+                      <p class="search-site__not_found-block-offers__item__header">Оформление полиса</p>
+                      <p class="search-site__not_found-block-offers__item__description">Узнайте как оформить полис легко и быстро</p>
+                    </div>
+                  </a>
+                  <a href="" class="search-site__not_found-block-offers__item">
+                    <div class="search-site__not_found-block-offers__item__icon">
+                      <img src="./img/search__polic.svg" alt="search__polic">
+                    </div>
+                    <div class="search-site__not_found-block-offers__item__content">
+                      <p class="search-site__not_found-block-offers__item__header">Оформление полиса</p>
+                      <p class="search-site__not_found-block-offers__item__description">Узнайте как оформить полис легко и быстро</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
 
-                      <p class="main-page__articles-data">
-                        24.02.2022
-                      </p>
+
+
+              <a href="#" class="search-site__result-polic">
+                <div class="search-site__result-pic">
+                  <img src="./img/search__polic.svg" alt="search__polic">
+                </div>
+
+                <div class="search-site__result-texts">
+                  <p class="search-site__result-label">Оформление полиса</p>
+                  <p class="search-site__result-descr">Узнайте как оформить полис легко и быстро</p>
+                </div>
+
+                <div class="search-site__result-arrow"> →</div>
+              </a>
+
+              <div class="search-site__result-total">
+                По запросу <span>"Полис" </span>найдено<span> 797 ответов</span>
+              </div>
+
+
+              <ul class="search-site__result-list main-page__articles-list">
+                <li class="main-page__articles-item main-page__articles-item--green">
+                  <a class="main-page__articles-link" href="#">
+                    <div class="main-page__articles-info">
+                      <div class="main-page__articles-header">
+                        <h5 class="main-page__articles-label">
+                          Профилактика и реабилитация
+                        </h5>
+
+                        <p class="main-page__articles-data">
+                          24.02.2022
+                        </p>
+                      </div>
+
+                      <h4 class="main-page__articles-name">
+                        Углубленная диспансеризация лиц после COVID-19
+                      </h4>
                     </div>
 
-                    <h4 class="main-page__articles-name">
-                      Углубленная диспансеризация лиц после COVID-19
-                    </h4>
-                  </div>
 
+                    <div class="main-page__articles-img">
+                      <img src="./img/main-page/main-page-articles-1.png" alt="">
+                    </div>
+                  </a>
+                </li>
 
-                  <div class="main-page__articles-img">
-                    <img src="./img/main-page/main-page-articles-1.png" alt="">
-                  </div>
-                </a>
-              </li>
+                <li class="main-page__articles-item main-page__articles-item--blue">
+                  <a class="main-page__articles-link" href="#">
+                    <div class="main-page__articles-info">
+                      <div class="main-page__articles-header">
+                        <h5 class="main-page__articles-label">
+                          Профилактика и реабилитация
+                        </h5>
 
-              <li class="main-page__articles-item main-page__articles-item--blue">
-                <a class="main-page__articles-link" href="#">
-                  <div class="main-page__articles-info">
-                    <div class="main-page__articles-header">
-                      <h5 class="main-page__articles-label">
-                        Профилактика и реабилитация
-                      </h5>
+                        <p class="main-page__articles-data">
+                          24.02.2022
+                        </p>
+                      </div>
 
-                      <p class="main-page__articles-data">
-                        24.02.2022
-                      </p>
+                      <h4 class="main-page__articles-name">
+                        Цифровой полис ОМС.<br>
+                        Как это будет? Мнение эксперта.
+                      </h4>
                     </div>
 
-                    <h4 class="main-page__articles-name">
-                      Цифровой полис ОМС.<br>
-                      Как это будет? Мнение эксперта.
-                    </h4>
-                  </div>
 
+                    <div class="main-page__articles-img">
+                      <img src="./img/main-page/main-page-articles-2.png" alt="">
+                    </div>
+                  </a>
+                </li>
 
-                  <div class="main-page__articles-img">
-                    <img src="./img/main-page/main-page-articles-2.png" alt="">
-                  </div>
-                </a>
-              </li>
+                <li class="main-page__articles-item main-page__articles-item--fiol">
+                  <a class="main-page__articles-link" href="#">
+                    <div class="main-page__articles-info">
+                      <div class="main-page__articles-header">
+                        <h5 class="main-page__articles-label">
+                          По закону
+                        </h5>
 
-              <li class="main-page__articles-item main-page__articles-item--fiol">
-                <a class="main-page__articles-link" href="#">
-                  <div class="main-page__articles-info">
-                    <div class="main-page__articles-header">
-                      <h5 class="main-page__articles-label">
-                        По закону
-                      </h5>
+                        <p class="main-page__articles-data">
+                          24.02.2022
+                        </p>
+                      </div>
 
-                      <p class="main-page__articles-data">
-                        24.02.2022
-                      </p>
+                      <h4 class="main-page__articles-name">
+                        Какие сроки ожидания медпомощи по закону?
+                      </h4>
                     </div>
 
-                    <h4 class="main-page__articles-name">
-                      Какие сроки ожидания медпомощи по закону?
-                    </h4>
+
+                    <div class="main-page__articles-img">
+                      <img src="./img/main-page/main-page-articles-3.png" alt="">
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="search-site__result-accardion new-header__questions-accordion new-questions-accordion"
+                data-accordion-wrapper>
+                <div class="new-questions-accordion__item" data-accordion-item>
+
+                  <div class="new-questions-accordion__header">
+                    Что такое система ОМС
+
+                    <img src="./img/header/Arrow.svg" alt="Arrow">
                   </div>
 
-
-                  <div class="main-page__articles-img">
-                    <img src="./img/main-page/main-page-articles-3.png" alt="">
+                  <div class="new-questions-accordion__content">
+                    <time class="new-accordion-f-a-q__item-time">Обновлено: 21.12.2023</time>
+                    <p class="new-questions-accordion__text">
+                      ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
+                      получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
+                      качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
+                      средств ОМС на условиях, установленных территориальной или базовой программами обязательного
+                      медицинского страхования.
+                    </p>
+                    <div class="new-accordion-f-a-q-form">
+                      <form data-set-survey-container class="new-accordion-f-a-q-form__inner">
+                        <p class="new-accordion-f-a-q-form__text">Ответ был полезен?</p>
+                        <label data-set-survey class="new-accordion-f-a-q-form__label">
+                          <input type="radio" name="like" class="new-accordion-f-a-q-form__input">
+                          <p class="new-accordion-f-a-q-form__desc">
+                            <span class="accordion-f-a-q-form__desc-like">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.1749 4.61051H10.14L10.6383 3.11454C10.7769 2.69968 10.7813 2.25171 10.6508 1.8342C10.5203 1.41668 10.2616 1.05094 9.91141 0.788883L9.25204 0.294569C8.95404 0.0715771 8.5727 -0.00788856 8.21041 0.0774914C7.84824 0.162871 7.54244 0.404291 7.37547 0.736863L6.77716 1.93341C6.1123 3.25795 5.18864 4.43563 4.06064 5.39683C3.7361 4.95666 3.24021 4.67452 2.6959 4.62038C2.1517 4.56614 1.60996 4.74515 1.20504 5.11278C0.800127 5.48052 0.569899 6.00252 0.571442 6.54938V12.0185C0.570549 12.5724 0.806822 13.1001 1.22067 13.4683C1.6345 13.8365 2.18618 14.0097 2.73618 13.9443C3.28618 13.8788 3.78184 13.5809 4.09778 13.1259L5.20001 13.8619C5.29376 13.9244 5.40392 13.9578 5.51653 13.9579H11.5165C11.9597 13.9597 12.393 13.8278 12.76 13.5794C13.127 13.3311 13.4105 12.9779 13.5737 12.5659L15.2308 8.42307C15.3364 8.1618 15.3903 7.88256 15.3897 7.60076V6.82365C15.3891 6.23659 15.1555 5.67376 14.7402 5.25879C14.3249 4.84385 13.762 4.61067 13.1749 4.61047L13.1749 4.61051ZM3.30628 12.0185C3.30628 12.3029 3.15461 12.5656 2.90828 12.7078C2.66208 12.8501 2.35863 12.8501 2.11231 12.7078C1.866 12.5656 1.71431 12.3029 1.71431 12.0185V6.54937C1.71431 6.26499 1.86599 6.00228 2.11231 5.86008C2.35863 5.71789 2.66208 5.71789 2.90828 5.86008C3.1546 6.00227 3.30628 6.265 3.30628 6.54937V12.0185ZM14.2451 7.6008C14.2457 7.73785 14.2197 7.87368 14.1686 8.0008L12.5143 12.1431C12.4353 12.3422 12.2983 12.5128 12.1209 12.6329C11.9436 12.7531 11.7342 12.8169 11.52 12.8162H5.69146L4.44918 11.9876V6.55049C5.85298 5.44323 6.99661 4.04157 7.79946 2.4442L8.40004 1.24823C8.41533 1.21865 8.44278 1.19722 8.47515 1.18952C8.50751 1.18193 8.54166 1.18874 8.56856 1.20827L9.22793 1.70259L9.22804 1.70248C9.38619 1.82111 9.50305 1.98652 9.56199 2.17525C9.62093 2.36398 9.61902 2.56642 9.55663 2.75393L8.80517 5.00025C8.74714 5.17447 8.77638 5.36588 8.88363 5.51488C8.991 5.66376 9.16332 5.75215 9.34692 5.75226H13.1755C13.4592 5.7526 13.7313 5.86543 13.932 6.06609C14.1326 6.26676 14.2455 6.53875 14.2458 6.82258L14.2451 7.6008Z" fill="#4D5759"/>
+                                </svg>
+                            </span>
+                            Да
+                          </p>
+                        </label>
+                        <label data-set-survey class="new-accordion-f-a-q-form__label">
+                          <input type="radio" name="like" class="new-accordion-f-a-q-form__input">
+                          <p class="new-accordion-f-a-q-form__desc accordion-f-a-q-form__desc--dislike">
+                                  <span class="accordion-f-a-q-form__desc-dislike">
+                                      <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M2.82515 9.38998L5.86 9.38998L5.36169 10.8859C5.22307 11.3008 5.21872 11.7488 5.34919 12.1663C5.47966 12.5838 5.73836 12.9495 6.08859 13.2116L6.74796 13.7059C7.04596 13.9289 7.4273 14.0084 7.78959 13.923C8.15176 13.8376 8.45756 13.5962 8.62453 13.2636L9.22284 12.0671C9.8877 10.7425 10.8114 9.56485 11.9394 8.60365C12.2639 9.04382 12.7598 9.32597 13.3041 9.38011C13.8483 9.43435 14.39 9.25533 14.795 8.88771C15.1999 8.51997 15.4301 7.99797 15.4286 7.45111L15.4286 1.98197C15.4295 1.42805 15.1932 0.900397 14.7793 0.532197C14.3655 0.163997 13.8138 -0.0092031 13.2638 0.056197C12.7138 0.121711 12.2182 0.419596 11.9022 0.874625L10.8 0.138568C10.7062 0.0760675 10.5961 0.0426965 10.4835 0.0425859L4.48347 0.0425854C4.04027 0.0407991 3.60702 0.172718 3.24004 0.421041C2.87296 0.669367 2.58947 1.02261 2.42633 1.43455L0.769188 5.57741C0.663608 5.83868 0.609703 6.11793 0.61026 6.39973L0.61026 7.17684C0.610929 7.7639 0.844522 8.32673 1.2598 8.7417C1.67509 9.15664 2.23803 9.38981 2.82509 9.39001L2.82515 9.38998ZM12.6937 1.98198C12.6937 1.6976 12.8454 1.43489 13.0917 1.29269C13.3379 1.15039 13.6414 1.15039 13.8877 1.29269C14.134 1.43488 14.2857 1.69761 14.2857 1.98198L14.2857 7.45112C14.2857 7.73549 14.134 7.99821 13.8877 8.14041C13.6414 8.28259 13.3379 8.28259 13.0917 8.1404C12.8454 7.99822 12.6937 7.73549 12.6937 7.45112L12.6937 1.98198ZM1.75486 6.39969C1.7543 6.26264 1.7803 6.12681 1.83142 5.99969L3.48565 1.8574C3.56467 1.6583 3.70172 1.48766 3.87908 1.36755C4.05644 1.24743 4.26579 1.18362 4.47997 1.18429L10.3085 1.18429L11.5508 2.01286L11.5508 7.45C10.147 8.55726 9.00339 9.95892 8.20054 11.5563L7.59996 12.7523C7.58467 12.7818 7.55722 12.8033 7.52485 12.811C7.49249 12.8186 7.45834 12.8117 7.43144 12.7922L6.77207 12.2979L6.77196 12.298C6.61381 12.1794 6.49696 12.014 6.43801 11.8252C6.37907 11.6365 6.38098 11.4341 6.44337 11.2466L7.19483 9.00024C7.25286 8.82602 7.22362 8.63461 7.11637 8.48561C7.009 8.33673 6.83668 8.24833 6.65308 8.24822L2.82451 8.24822C2.5408 8.24789 2.26871 8.13505 2.06803 7.93439C1.86736 7.73373 1.75451 7.46174 1.7542 7.17791L1.75486 6.39969Z" fill="#4D5759"/>
+                                      </svg>
+                                  </span>
+                            Нет
+                          </p>
+                        </label>
+                      </form>
+                      <a data-download-survey-pdf class="new-accordion-f-a-q-form__link">Скачать в PDF</a>
+                    </div>
                   </div>
-                </a>
-              </li>
-            </ul>
-
-            <div class="search-site__result-accardion new-header__questions-accordion new-questions-accordion"
-              data-accordion-wrapper>
-              <div class="new-questions-accordion__item" data-accordion-item>
-                <div class="new-questions-accordion__header">
-                  Что такое система ОМС
-
-                  <img src="./img/header/Arrow.svg" alt="Arrow">
                 </div>
 
-                <div class="new-questions-accordion__content">
-                  <p class="new-questions-accordion__text">
-                    ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
-                    получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
-                    качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
-                    средств ОМС на условиях, установленных территориальной или базовой программами обязательного
-                    медицинского страхования.
-                  </p>
-                </div>
-              </div>
+                <div class="new-questions-accordion__item" data-accordion-item>
+                  <div class="new-questions-accordion__header">
+                    Что такое система ОМС
 
-              <div class="new-questions-accordion__item" data-accordion-item>
-                <div class="new-questions-accordion__header">
-                  Что такое система ОМС
+                    <img src="./img/header/Arrow.svg" alt="Arrow">
+                  </div>
 
-                  <img src="./img/header/Arrow.svg" alt="Arrow">
-                </div>
-
-                <div class="new-questions-accordion__content">
-                  <p class="new-questions-accordion__text">
-                    ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
-                    получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
-                    качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
-                    средств ОМС на условиях, установленных территориальной или базовой программами обязательного
-                    медицинского страхования.
-                  </p>
-                </div>
-              </div>
-
-              <div class="new-questions-accordion__item" data-accordion-item>
-                <div class="new-questions-accordion__header">
-                  Что такое система ОМС
-
-                  <img src="./img/header/Arrow.svg" alt="Arrow">
+                  <div class="new-questions-accordion__content">
+                    <p class="new-questions-accordion__text">
+                      ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
+                      получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
+                      качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
+                      средств ОМС на условиях, установленных территориальной или базовой программами обязательного
+                      медицинского страхования.
+                    </p>
+                  </div>
                 </div>
 
-                <div class="new-questions-accordion__content">
-                  <p class="new-questions-accordion__text">
-                    ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
-                    получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
-                    качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
-                    средств ОМС на условиях, установленных территориальной или базовой программами обязательного
-                    медицинского страхования.
-                  </p>
-                </div>
-              </div>
+                <div class="new-questions-accordion__item" data-accordion-item>
+                  <div class="new-questions-accordion__header">
+                    Что такое система ОМС
 
-              <div class="new-questions-accordion__item" data-accordion-item>
-                <div class="new-questions-accordion__header">
-                  Что такое система ОМС
+                    <img src="./img/header/Arrow.svg" alt="Arrow">
+                  </div>
 
-                  <img src="./img/header/Arrow.svg" alt="Arrow">
-                </div>
-
-                <div class="new-questions-accordion__content">
-                  <p class="new-questions-accordion__text">
-                    ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
-                    получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
-                    качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
-                    средств ОМС на условиях, установленных территориальной или базовой программами обязательного
-                    медицинского страхования.
-                  </p>
-                </div>
-              </div>
-
-              <div class="new-questions-accordion__item" data-accordion-item>
-                <div class="new-questions-accordion__header">
-                  Что такое система ОМС
-
-                  <img src="./img/header/Arrow.svg" alt="Arrow">
+                  <div class="new-questions-accordion__content">
+                    <p class="new-questions-accordion__text">
+                      ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
+                      получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
+                      качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
+                      средств ОМС на условиях, установленных территориальной или базовой программами обязательного
+                      медицинского страхования.
+                    </p>
+                  </div>
                 </div>
 
-                <div class="new-questions-accordion__content">
-                  <p class="new-questions-accordion__text">
-                    ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
-                    получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
-                    качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
-                    средств ОМС на условиях, установленных территориальной или базовой программами обязательного
-                    медицинского страхования.
-                  </p>
+                <div class="new-questions-accordion__item" data-accordion-item>
+                  <div class="new-questions-accordion__header">
+                    Что такое система ОМС
+
+                    <img src="./img/header/Arrow.svg" alt="Arrow">
+                  </div>
+
+                  <div class="new-questions-accordion__content">
+                    <p class="new-questions-accordion__text">
+                      ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
+                      получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
+                      качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
+                      средств ОМС на условиях, установленных территориальной или базовой программами обязательного
+                      медицинского страхования.
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="new-questions-accordion__item" data-accordion-item>
-                <div class="new-questions-accordion__header">
-                  Что такое система ОМС
+                <div class="new-questions-accordion__item" data-accordion-item>
+                  <div class="new-questions-accordion__header">
+                    Что такое система ОМС
 
-                  <img src="./img/header/Arrow.svg" alt="Arrow">
+                    <img src="./img/header/Arrow.svg" alt="Arrow">
+                  </div>
+
+                  <div class="new-questions-accordion__content">
+                    <p class="new-questions-accordion__text">
+                      ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
+                      получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
+                      качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
+                      средств ОМС на условиях, установленных территориальной или базовой программами обязательного
+                      медицинского страхования.
+                    </p>
+                  </div>
                 </div>
 
-                <div class="new-questions-accordion__content">
-                  <p class="new-questions-accordion__text">
-                    ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
-                    получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
-                    качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
-                    средств ОМС на условиях, установленных территориальной или базовой программами обязательного
-                    медицинского страхования.
-                  </p>
+                <div class="new-questions-accordion__item" data-accordion-item>
+                  <div class="new-questions-accordion__header">
+                    Что такое система ОМС
+
+                    <img src="./img/header/Arrow.svg" alt="Arrow">
+                  </div>
+
+                  <div class="new-questions-accordion__content">
+                    <p class="new-questions-accordion__text">
+                      ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
+                      получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
+                      качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
+                      средств ОМС на условиях, установленных территориальной или базовой программами обязательного
+                      медицинского страхования.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="new-questions-accordion__item" data-accordion-item>
+                  <div class="new-questions-accordion__header">
+                    Что такое система ОМС
+
+                    <img src="./img/header/Arrow.svg" alt="Arrow">
+                  </div>
+
+                  <div class="new-questions-accordion__content">
+                    <p class="new-questions-accordion__text">
+                      ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
+                      получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
+                      качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
+                      средств ОМС на условиях, установленных территориальной или базовой программами обязательного
+                      медицинского страхования.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="new-questions-accordion__item" data-accordion-item>
-                <div class="new-questions-accordion__header">
-                  Что такое система ОМС
-
-                  <img src="./img/header/Arrow.svg" alt="Arrow">
-                </div>
-
-                <div class="new-questions-accordion__content">
-                  <p class="new-questions-accordion__text">
-                    ОМС обеспечивает конституционное право (статья 41 Конституции РФ) каждого гражданина РФ на
-                    получение бесплатной медицинской помощи (при наступлении страхового случая) в надлежащем объеме,
-                    качестве и в установленные сроки. Медицинская помощь в системе ОМС предоставляется за счет
-                    средств ОМС на условиях, установленных территориальной или базовой программами обязательного
-                    медицинского страхования.
+              <ul class="search-site__result-list-main">
+                <li class="search-site__result-list-main__item">
+                  <a href="" class="search-site__result-list-main__item-title">
+                    Оформление электронного полиса
+                  </a>
+                  <p class="search-site__result-list-main__item-description">
+                    Электронный полис обязательного медицинского страхования - это один из видов полиса обязательного медицинского страхования, который дает такое же право ...
                   </p>
-                </div>
+                  <p class="search-site__result-list-main__item-footer">
+                    17 сентября 2020 | Статические страницы
+                  </p>
+                </li>
+
+                <li class="search-site__result-list-main__item">
+                  <a href="" class="search-site__result-list-main__item-title">
+                    Оформление электронного полиса
+                  </a>
+                  <p class="search-site__result-list-main__item-description">
+                    Электронный полис обязательного медицинского страхования - это один из видов полиса обязательного медицинского страхования, который дает такое же право ...
+                  </p>
+                  <p class="search-site__result-list-main__item-footer">
+                    17 сентября 2020 | Статические страницы
+                  </p>
+                </li>
+
+                <li class="search-site__result-list-main__item">
+                  <a href="" class="search-site__result-list-main__item-title">
+                    Оформление электронного полиса
+                  </a>
+                  <p class="search-site__result-list-main__item-description">
+                    Электронный полис обязательного медицинского страхования - это один из видов полиса обязательного медицинского страхования, который дает такое же право ...
+                  </p>
+                  <p class="search-site__result-list-main__item-footer">
+                    17 сентября 2020 | Статические страницы
+                  </p>
+                </li>
+              </ul>
+
+              <div class="pagination">
+                <nav>
+                  <div class="pager-current active"><a>1</a></div>
+                  <div><a href="">2</a></div>
+                  <div class=""><a href="">3</a></div>
+                  <div class=""><a href="">4</a></div>
+
+                  <div class="dotted">…</div>
+
+                  <div class=""><a href="">10</a></div>
+                  <div class="next"><a href="" >Вперед</a></div>
+                </nav>
+
               </div>
+
             </div>
           </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
   </main>
