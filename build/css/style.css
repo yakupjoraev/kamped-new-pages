@@ -2672,11 +2672,12 @@ a:visited {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 10px;
+  row-gap: 6px;
 }
 
 .main-page__accessibility-item {
   position: relative;
+  margin-bottom: 0;
   padding-left: 12px;
   font-size: 20px;
   font-weight: 400;
@@ -6002,6 +6003,7 @@ a:visited {
 
   .main-page__years-title a {
     font-size: 36px;
+    border-bottom: 3px solid var(--red-color);
   }
 
   .main-page__years-pic {
@@ -7204,7 +7206,7 @@ a:visited {
 
 @media (max-width: 479.98px) {
   .fixed-btns {
-    right: 5px;
+    right: 15px;
   }
 
   .fixed-btns__pic {
