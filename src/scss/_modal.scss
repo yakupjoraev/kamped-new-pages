@@ -21,14 +21,6 @@
   opacity: 1;
 }
 
-.modal-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .modal-content {
   background-color: white;
   margin: 10% auto;
@@ -224,10 +216,6 @@
     padding-top: 80px;
     overflow-y: auto;
 
-    .new-header__questions-accordion {
-      max-height: initial;
-    }
-
     @media (max-width: $breakpoint768) {
       padding: 80px 0 0;
     }
@@ -304,7 +292,6 @@
 
   &__form {
     position: relative;
-<<<<<<< HEAD
     width: 100%;
     margin: 0;
     z-index: 2;
@@ -316,34 +303,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-=======
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    flex-wrap: wrap;
-
-    &__suggest-block {
-      position: relative;
-      width: 100%;
-      top: -3px;
-      &__container {
-        padding: 5px;
-        background-color: white;
-        border-bottom: 1px solid;
-        border-right: 1px solid;
-        border-left: 1px solid;
-        border-color: black;
-      }
-      &__item {
-        padding: 10px;
-        cursor: pointer;
-      }
-    }
->>>>>>> 460c2515d4255500db48454c777748594ce50143
   }
-
-
 
   // .search-site__search
 
@@ -381,7 +341,6 @@
     background: #b8181c;
     position: absolute;
     z-index: 1;
-    top: 0;
     right: 0;
     color: #fff;
     cursor: pointer;
@@ -463,146 +422,12 @@
   // .search-site__bottom
 
   &__bottom {}
-
-  .new-accordion-f-a-q__item-time {
-    display: flex;
-    margin-bottom: 20px;
-    font-family: var(--font-family, sans-serif);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 135%;
-    color: #4D5759;
-  }
-
-  .new-accordion-f-a-q-form {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .new-accordion-f-a-q-form__inner {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0;
-
-  }
-
-  .new-accordion-f-a-q-form__text {
-    margin-right: 40px;
-    font-size: 16px;
-    line-height: 135%;
-    color: #4D5759;
-  }
-
-  .new-accordion-f-a-q-form__label {
-    cursor: pointer;
-    margin-bottom: 0;
-    margin-right: 15px;
-  }
-  .new-accordion-f-a-q-form__desc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1;
-  }
-
-  .new-accordion-f-a-q-form__desc {
-    span {
-      margin-right: 5px
-    }
-  }
-
-  .new-accordion-f-a-q-form__link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    width: 130px;
-    height: 32px;
-    border: 1px solid #969696;
-    border-radius: 2px;
-    font-size: 16px;
-    color: #4D5759;
-  }
-
-  .search-site__result-list-main {
-    &__item {
-      margin-bottom: 20px;
-    }
-
-    &__item-title {
-      display: block;
-      font-size: 16px;
-      color:#b70d18;
-      margin-bottom: 5px;
-    }
-
-    &__item-description {
-      font-size: 17px;
-      line-height: 24px;
-      color: #313131;
-    }
-
-    &__item-footer {
-      color: #939393;
-      font-size: 12px;
-    }
-  }
-
 }
 
 .search-site__aside-link--red {
   color: var(--red-color);
 }
-.search-site__not_found-block {
-  &__title {
-    color: #909090;
-    font-size: 30px;
-    margin-bottom: 50px
-  }
-}
 
-.search-site__not_found-block-offers {
-  &__title {
-    font-size: 28px;
-    margin-bottom: 24px;
-  }
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  &__item {
-    max-width: 50%;
-    padding: 27px 1.6rem;
-    display: flex;
-    min-height: 170px;
-    border: 1px solid #D1D1D1;
-    margin-bottom: 24px;
-    border-radius: 8px;
-
-    &__icon {
-      flex: 0 0 20%;
-      max-width: 20%;
-    }
-
-    &__header {
-      font-size: 20px;
-      line-height: 26px;
-      margin-bottom: 14px;
-    }
-
-    &__description {
-      font-size: 16px;
-      line-height: 21px;
-    }
-  }
-}
-.search-site > div {
-  width: 100%
-}
 .search-site__result-list {
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 20px;

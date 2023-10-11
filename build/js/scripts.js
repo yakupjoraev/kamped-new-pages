@@ -167,12 +167,8 @@ function newAccardion() {
   const accordionItems = document.querySelectorAll('[data-accordion-item]');
   let openAccordion = null; // переменная для хранения ссылки на открытый аккордеон
 
-  function toggleAccordion(event) {
-    let target = event.target;
-    if(!Array.from(accordionItems).includes(target) && !target.closest('[data-accordion-item]')) {
-      return;
-    }
-    if (openAccordion && openAccordion !== target) {
+  function toggleAccordion() {
+    if (openAccordion && openAccordion !== this) {
       // Если есть открытый аккордеон, который не совпадает с текущим
       openAccordion.classList.remove('active'); // закрыть его
       const openAccordionContent = openAccordion.nextElementSibling;
@@ -182,9 +178,9 @@ function newAccardion() {
       }
     }
 
-    target.classList.toggle('active'); // открыть или закрыть текущий аккордеон
+    this.classList.toggle('active'); // открыть или закрыть текущий аккордеон
 
-    const content = target.nextElementSibling;
+    const content = this.nextElementSibling;
     if (content) {
       // если у аккордеона есть содержимое
       if (content.style.maxHeight) {
@@ -196,9 +192,10 @@ function newAccardion() {
       }
     }
 
-    openAccordion = target; // запомнить ссылку на открытый аккордеон
+    openAccordion = this; // запомнить ссылку на открытый аккордеон
   }
-  document.body.addEventListener('click', toggleAccordion)
+
+  accordionItems.forEach(item => item.addEventListener('click', toggleAccordion));
 }
 
 newAccardion();
@@ -384,9 +381,7 @@ function modals() {
     btn.addEventListener('click', () => {
       const modalId = btn.dataset.modalId;
       const modal = document.getElementById(modalId);
-      if(modal) {
-        modal.classList.add('show');
-      }
+      modal.classList.add('show');
     });
   });
 
